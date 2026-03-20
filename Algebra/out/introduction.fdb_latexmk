@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1773928553.91417 "d:/UNIPA/LaTeX/Algebra/src/introduction.tex" "d:/UNIPA/LaTeX/Algebra/out/introduction.pdf" "introduction" 1773928554.47601 0
+["pdflatex"] 1774010163.94825 "d:/UNIPA/LaTeX/Algebra/src/introduction.tex" "d:/UNIPA/LaTeX/Algebra/out/introduction.pdf" "introduction" 1774010164.49443 0
   "C:/Users/ricca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1773764641 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ricca/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbi1095.pk" 1762606138 38336 1a8272b4842867aafa0f0c26ff52149f ""
   "C:/Users/ricca/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1762527879 28976 452a0992c28965356ad0c969800f66ee ""
@@ -101,10 +101,10 @@
   "C:/Users/ricca/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/ricca/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/ricca/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "d:/UNIPA/LaTeX/Algebra/out/introduction.aux" 1773928554 316 063cfc0b904d090701b2370597d4c312 "pdflatex"
-  "d:/UNIPA/LaTeX/Algebra/out/introduction.out" 1773928554 149 ff14dc4f586fd0af2ebf77616c0794ba "pdflatex"
-  "d:/UNIPA/LaTeX/Algebra/src/introduction.tex" 1773928552 2826 bce7c648d74a3f51486f919989cc2792 ""
-  "introduction.tex" 1773928552 2826 bce7c648d74a3f51486f919989cc2792 ""
+  "d:/UNIPA/LaTeX/Algebra/out/introduction.aux" 1774010164 316 eb3a929881e565fd527246e7592c4145 "pdflatex"
+  "d:/UNIPA/LaTeX/Algebra/out/introduction.out" 1774010164 149 ff14dc4f586fd0af2ebf77616c0794ba "pdflatex"
+  "d:/UNIPA/LaTeX/Algebra/src/introduction.tex" 1774010163 5613 5e3ea87459f1cfc3f30cc9f9cf3dcda4 ""
+  "introduction.tex" 1774010163 5613 5e3ea87459f1cfc3f30cc9f9cf3dcda4 ""
   (generated)
   "d:/UNIPA/LaTeX/Algebra/out/introduction.aux"
   "d:/UNIPA/LaTeX/Algebra/out/introduction.log"

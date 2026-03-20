@@ -63,5 +63,54 @@ insiemi più conosciuti:
 Importante specificare che la lista qui sopra è una vera e propria \emph{gerarchia degli insiemi}.
 Ogni insieme che sta "al di sopra" di un altro infatti erediterà tutte le caratterestiche di quello prima;
 mettendola in termine semplici l'insieme dei numeri complessi sarà quindi quello che "ricopre" più caratterestiche.
+\\
+\\
+Continuiamo però con le nozioni di base parlando delle \textbf{operazioni}; 
+per molti sembrerà ovvio ma per il fine di aver un testo "preparato a tutto" spiegherò anche
+cosa è una \emph{operazione aritmetica}. \\
+Presi due numeri (per il momento immaginiamo di essere nell'insieme dei numeri reali),
+che chiameremo "\textbf{operandi}", otteremo un terzo numero, detto "\textbf{risultato}" che
+cambierà in base alla \textbf{operazione aritmetica} scelta. \\
+Tra queste operazioni, come già sappiamo, troviamo: \textbf{addizione} (\(+\)), 
+\textbf{sottrazione} (\(-\)), \textbf{moltiplicazione} (\(\times\))
+e \textbf{divisione} (\(\div\)). \\
+Abbiamo posto come esempio l'insieme dei numeri reali, ma in realtà quando parliamo di operazioni
+è importante specificare in quale insieme siamo poichè non tutte sono definite allo stesso
+modo in ogni insieme.
+Usando l'esempio della divisione e moltiplicazione nei numeri naturali capiremo meglio cosa intendo.
+\\
+Definiamo la \emph{divisione} come l'operazione inversa alla \emph{moltiplicazione}, per tanto:
+
+\[ 3 \times 2 = 6 \implies 6 \div 2 = 3 \]
+
+Fin qui nulla di nuovo ovviamente, abbiamo preso due \emph{operandi} appartenenti ai numeri naturali
+(\(3\) e \(2\)) e abbiamo ottenuto un \emph{risultato} naturale (\(6\)). Proviamo però a scambiare
+l'ordine di questa operazione:
+
+\[ 3 \div 6 = ? \]
+
+Il nostro cervello però sa benissimo il risultato di questa operazione, poichè già da piccoli siamo
+stati abituati a calcolare usando indirettamente l'insieme dei numeri reali; ma adesso non siamo
+in quell'insieme e il risultato \(3 \div 6 = 0.5\) \textbf{non rientra} nei numeri naturali.
+Poichè abbiamo definito la divisione come operazione inversa della moltiplicazione, possiamo anche
+usare il contro esempio dell'espressione
+
+\[ 0.5 \times 6 = ?\]
+
+Questa è ovviamente un'espressione \textbf{non valida} nell'insieme naturale poichè presenta
+un operando non naturale (\(0.5\)). \\
+Questa logica si applica pure alle \textbf{proprietà} delle operazioni. Continuando con l'esempio
+della moltiplicazione, possiamo dire che questa operazione gode della \textbf{proprietà dell'inverso}
+nell'insieme dei numeri reali; ovvero:
+\[
+  \forall x \in \mathbb{R} \setminus \{0\} \quad
+  \exists ! \backepsilon x \times \frac{1}{x} = 1
+\]
+
+La stessa cosa però non possiamo invece dirla nell'insieme dei numeri interi poichè il 
+valore \(\frac{1}{x}\) non è un valore intero, di conseguenza non vale questa proprietà in quell'insieme. \\
+Ricapitolando tutto quello che abbiamo detto. \\
+Definendo una qualsiasi operazione \(\star\), per essere valida, dobbiamo anche definire l'insieme \(\mathbb{A}\)
+dove "opera" e, di conseguenza, le sue proprietà in quell'insieme.
 
 \end{document}
