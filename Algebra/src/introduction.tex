@@ -21,7 +21,7 @@ di uno stadio sono un \emph{insieme}, gli snack all'interno della mia dispensa s
 \emph{insieme} e, come vedremo, anche i numeri fanno parte di un \emph{insieme}. \\
 Indicheremo quindi un insieme come: 
 \[
-  A = \{ 1, 2, 3, 4, 5 \}
+  A = \{0, 1, 2, 3, 4, 5 \}
 \]
 
 Il numero degli elementi all'interno di un insieme prende il nome di \textbf{cardinalità}
@@ -33,7 +33,7 @@ Di conseguenza possiamo cominciare a parlare in maniera più generale di insiemi
 Se continuassimo a "estendere" l'insieme \(A\) citato prima otteremo un insieme
 del tipo: 
 \[
-  A = \{ 1, 2, 3, \dots \infty \}
+  A = \{0, 1, 2, 3, \dots \infty \}
 \]
 
 Non a caso quello che abbiamo appena scritto prende il nome di 
@@ -43,7 +43,7 @@ Estendendo infatti passo dopo passo questo primo insieme otteremo tutti gli
 insiemi più conosciuti:
 
 \begin{itemize}
-  \item \( \mathbb{N} = \{ 1, 2, 3 \dots \infty \} \) \\ 
+  \item \( \mathbb{N} = \{0, 1, 2, 3 \dots \infty \} \) \\ 
   \textbf{Insieme dei numeri naturali},
   che contiene tutti i numeri interi positivi
   \item \( \mathbb{Z} = \{ -\infty, \dots -2, -1, 0, 1, 2, 3 \dots \infty \} \) \\ 
@@ -61,8 +61,11 @@ insiemi più conosciuti:
 \end{itemize}
 
 Importante specificare che la lista qui sopra è una vera e propria \emph{gerarchia degli insiemi}.
-Ogni insieme che sta "al di sopra" di un altro infatti erediterà tutte le caratterestiche di quello prima;
-mettendola in termine semplici l'insieme dei numeri complessi sarà quindi quello che "ricopre" più caratterestiche.
+Ogni insieme "al di sopra" di un altro eredediterà gli elementi di quello "al di sotto";
+introduciamo così i \textbf{sottoinsiemi}. \\
+Se tutti gli elementi di un insieme \(A\) appartengono anche ad un insieme \(B\) allora
+possiamo dire che \(A\) è un \textbf{sottoinsieme} di \(B\); indichiamo questo scenario
+con la notazione \(A \subseteq B\).
 \\
 \\
 Continuiamo però con le nozioni di base parlando delle \textbf{operazioni}; 
@@ -79,8 +82,7 @@ Abbiamo posto come esempio l'insieme dei numeri reali, ma in realtà quando parl
 modo in ogni insieme.
 Usando l'esempio della divisione e moltiplicazione nei numeri naturali capiremo meglio cosa intendo.
 \\
-Definiamo la \emph{divisione} come l'operazione inversa alla \emph{moltiplicazione}, per tanto:
-
+Definiamo la \emph{divisione} come l'operazione inversa della \emph{moltiplicazione}, per tanto:
 \[ 3 \times 2 = 6 \implies 6 \div 2 = 3 \]
 
 Fin qui nulla di nuovo ovviamente, abbiamo preso due \emph{operandi} appartenenti ai numeri naturali
@@ -104,13 +106,32 @@ della moltiplicazione, possiamo dire che questa operazione gode della \textbf{pr
 nell'insieme dei numeri reali; ovvero:
 \[
   \forall x \in \mathbb{R} \setminus \{0\} \quad
-  \exists ! \backepsilon x \times \frac{1}{x} = 1
+  \exists !x \backepsilon x \times \frac{1}{x} = 1
 \]
 
 La stessa cosa però non possiamo invece dirla nell'insieme dei numeri interi poichè il 
 valore \(\frac{1}{x}\) non è un valore intero, di conseguenza non vale questa proprietà in quell'insieme. \\
+\\
 Ricapitolando tutto quello che abbiamo detto. \\
-Definendo una qualsiasi operazione \(\star\), per essere valida, dobbiamo anche definire l'insieme \(\mathbb{A}\)
-dove "opera" e, di conseguenza, le sue proprietà in quell'insieme.
+Definendo una qualsiasi operazione \(\star\), per essere valida, dobbiamo anche definire l'insieme 
+\(A\) dove "opera" e, di conseguenza, le sue proprietà in quell'insieme.
+
+\section{Strutture algebriche}
+
+\subsection{Gruppo}
+Indichiamo col termine \textbf{gruppo} un insieme \(G\) in cui viene definita
+una operazione binaria \(\star\) che associa ogni coppia \(a,b \in G\) un risultato
+\(c \in G\). Tale operazione deve soddisfare i seguenti assiomi:
+
+\begin{itemize}
+  \item 
+  l'operazione gode della \textbf{proprietà associativa} \\
+  \((a \star b) \star c = a \star (b \star c)\) \\
+  in parole povere, l'ordine in cui vengono "gestiti" gli operandi non influisce 
+  sul risutato dell'operazione.
+
+  \item
+  sono gay
+\end{itemize}
 
 \end{document}
