@@ -25,7 +25,7 @@ Indicheremo quindi un insieme come:
 \]
 
 Il numero degli elementi all'interno di un insieme prende il nome di \textbf{cardinalità}
-e può essere \emph{finito} o \emph{infinito}; nell'esempio di prima useremo quindi la
+(si usa anche il termine \textbf{ordine}) e può essere \emph{finito} o \emph{infinito}; nell'esempio di prima useremo quindi la
 notazione \(|A| = 5\) per indicare la cardinalità dell'insieme.
 \\
 \\
@@ -118,20 +118,59 @@ Definendo una qualsiasi operazione \(\star\), per essere valida, dobbiamo anche 
 
 \section{Strutture algebriche}
 
-\subsection{Gruppo}
+\subsection{Gruppi e semigruppi}
 Indichiamo col termine \textbf{gruppo} un insieme \(G\) in cui viene definita
 una operazione binaria \(\star\) che associa ogni coppia \(a,b \in G\) un risultato
 \(c \in G\). Tale operazione deve soddisfare i seguenti assiomi:
 
 \begin{itemize}
+
   \item 
   l'operazione gode della \textbf{proprietà associativa} \\
   \((a \star b) \star c = a \star (b \star c)\) \\
-  in parole povere, l'ordine in cui vengono "gestiti" gli operandi non influisce 
-  sul risutato dell'operazione.
+
+  \item 
+  l'operazione è \textbf{interna} \\
+  \( \forall a,b \in G \quad a \star b \in G\)
 
   \item
-  sono gay
+  esistenza dell'\textbf{elemento neutro} \\
+  \( \forall a \in G \quad \exists!e \backepsilon a \star e = e \star a = a \) \\
+
+  \item
+  esistenza dell'\textbf{inverso} \\
+  \( \forall a \in G \quad \exists!a' \backepsilon a \star a' = a' \star a = e \) \\
+
 \end{itemize}
+
+Inoltre, un gruppo viene definito \textbf{gruppo abeliano} se l'operazione \(\star\) 
+gode anche della \textbf{proprietà commutativa}:
+
+\[ \forall a,b \in G \quad a \star b = b \star a\]
+
+Al contrario, se in un insieme \(H\) definiamo un'\textbf{operazione binaria interna} \(\odot\) 
+che gode \underline{soltanto} della \textbf{propria associativa} allora indicheremo \(H\)
+come un \textbf{semigruppo}.
+
+\subsection{Anelli}
+Dopo aver definito \emph{gruppo} e \emph{sottogruppo} possiamo 
+procedere con un'altra struttura algebrica: l'\textbf{anello}.
+\\
+\\
+Definiamo in un insieme \(A\) le operazioni binarie interne di somma 
+(\(+\)) e moltiplicazione (\(\cdot\)). \\
+Se per ogni \(a,b,c \in A\):
+
+\begin{itemize}
+  
+  \item \( (A, +) \) è un gruppo abeliano con elemento neutro \(0\)
+  \item \( (A, \cdot) \) è un semigruppo
+  \item La moltiplicazione è distributiva rispetto alla somma \\
+  \( a \cdot (b + c) = ab + ac\) \\
+  \( (a + b) \cdot c = ac + bc\)
+
+\end{itemize}
+
+Allora l'insieme \(A\) con le operazioni \( (+, \cdot) \) viene chiamato \textbf{anello}.
 
 \end{document}
