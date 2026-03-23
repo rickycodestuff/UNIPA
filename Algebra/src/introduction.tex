@@ -118,7 +118,7 @@ Definendo una qualsiasi operazione \(\star\), per essere valida, dobbiamo anche 
 
 \section{Strutture algebriche}
 
-\subsection{Gruppi e semigruppi}
+\subsection{Gruppi, sottogruppi e semigruppi}
 Indichiamo col termine \textbf{gruppo} un insieme \(G\) in cui viene definita
 una operazione binaria \(\star\) che associa ogni coppia \(a,b \in G\) un risultato
 \(c \in G\). Tale operazione deve soddisfare i seguenti assiomi:
@@ -151,8 +151,26 @@ gode anche della \textbf{proprietà commutativa}:
 Al contrario, se in un insieme \(H\) definiamo un'\textbf{operazione binaria interna} \(\odot\) 
 che gode \underline{soltanto} della \textbf{propria associativa} allora indicheremo \(H\)
 come un \textbf{semigruppo}.
+\\
+\\
+Adesso che sappiamo cosa è un gruppo, parliamo dei \textbf{sottogruppi}. \\
+Preso un gruppo \((G, \star)\), l'insieme \(H \subseteq G\) verrà indicato 
+come \textbf{sottogruppo} di \(G\) se:
 
-\subsection{Anelli}
+\begin{itemize}
+  \item l'elemento neutro è presente sia nel gruppo "padre" che nel sottoinsieme \\ 
+  \(e \in G, H\)
+
+  \item chiusura dell'operazione \(\star\) \\
+  \(\forall a,b \in H \quad a \star b \in H\)
+
+  \item l'elemento inverso di un qualsiasi elemento di \(H\) sarà
+  comunque interno all'insieme \(H\) \\
+  \( \forall a \in H \quad a^{-1} \in H\)
+  
+\end{itemize}
+
+\subsection{Anelli e sottoanelli}
 Dopo aver definito \emph{gruppo} e \emph{sottogruppo} possiamo 
 procedere con un'altra struttura algebrica: l'\textbf{anello}.
 \\
@@ -175,58 +193,50 @@ Allora l'insieme \(A\) con le operazioni \( (+, \cdot) \) viene chiamato \textbf
 Inoltre, se la moltiplicazione gode anche della proprietà commutativa l'anello viene detto 
 \textbf{anello commutativo}; se invece, la moltiplicazione ammette elemento neutro allora si dice
 \textbf{anello unitario}. \\
-Quando poi l'anello è di tipo commutativo e non esistono divisori dello zero allora siamo di fronte
-ad un \textbf{dominio d'integrità}. Ma che vuol dire "non esistono divisori di zero"?
+Quando poi l'anello è di entrambi i tipi citati e non esistono divisori 
+dello zero allora siamo di fronte
+ad un \textbf{dominio d'integrità}. \\ 
+Ma che vuol dire "non esistono divisori di zero"?
 Vuol dire che se la moltiplicazione \(a \cdot b = 0\) allora sicuramente \(a = 0\) oppure \(b = 0\);
-e no, questo non è "ovvio".
+come già detto siamo "abituati" a pensare in un classico insieme \(\mathbb{R}\), quindi
+una condizione di questo tipo per noi è "ovvia", ma non è sempre così.
 \\
 \\
-Prendiamo come esempio l'insieme numerico \(\mathbb{Z}_3\). \\
+Prendiamo come esempio l'insieme numerico \(\mathbb{Z}_4\). \\
 Il numero al pedice ci indica che siamo nel "classico" insieme \(\mathbb{Z}\) 
-ma al suo interno troviamo soltanto i possibili resti di una qualsiasi divisione per \(3\).
-Una divisione \(a : n\) avrà sempre come risultato un numero con resto compreso tra 
-\(0 \le r \le n - 1\); l'insieme \(\mathbb{Z}_3\) sarà quindi composto così:
-\[ \mathbb{Z}_3 = \{ 0, 1, 2\} \]
+ma al suo interno troviamo soltanto i possibili resti di una qualsiasi divisione per \(4\).
+Una divisione \(n : a\) (dove \(n\) è il nostro pedice) avrà sempre come risultato un numero con resto compreso tra 
+\(0 \le r \le n - 1\), o più semplicemente, tutti gli elementi di \(\mathbb{Z}_4\)
+saranno "in modulo \(4\)". \\
+L'insieme \(\mathbb{Z}_4\) sarà quindi composto così:
+\[ \mathbb{Z}_4 = \{ 0, 1, 2, 3\} \]
 Più avanti vedremo come la notazione più corretta sarebbe:
-\[ \mathbb{Z}_3 = \{ [0], [1], [2]\} \]
+\[ \mathbb{Z}_4 = \{ [0], [1], [2], [3]\} \]
 Ma non è importante per il momento. \\
-Verifichiamo ora che questo insieme sia un anello, cominciando col controllare che
-\( (\mathbb{Z}_3, +) \) sia un gruppo abeliano; non andremo a dimostrare in modo
-concreto i vari assiomi del gruppo abeliano ma ci limiteremo a degli esempi semplici. \\
-Quindi, l'insieme \(\mathbb{Z}_3\), in cui è definita l'operazione di somma, sarà un \textbf{gruppo abeliano}
-se:
+Come detto prima non è sempre "ovvio" che: 
+\[ a \cdot b = 0 \iff a = 0 \lor b = 0\]
+
+Poichè siamo in \(\mathbb{Z}_4\) una moltiplicazione come
+\(2 \cdot 2\) non avrà lo stesso risultato dell'insieme \(\mathbb{R}\); 
+sarà infatti:
+\[ 2 \cdot 2 \equiv 0 \pmod{4}\]
+E in questo caso \(a \cdot b = 0\) con \(a, b \neq 0\)
+\\
+\\
+Dopo aver approfondito gli anelli possiamo ora parlare dei \textbf{sottoanelli}.
+Preso un anello \(A\), dove quindi sono definite le operazioni binarie interne 
+di somma e prodotto, e che queste godono delle proprietà già citate, diremo che 
+\(S\) è un \textbf{sottoanello} di \(A\) se:
 
 \begin{itemize}
+  \item l'elemento neutro \(0\) appartiene sia all'anello "grande" \(A\)
+  che ad \(S\)
 
-  \item \textbf{la somma è interna} \\
-  è importante ricordare che ogni elemento dell'insieme è un possibile resto di una divsione del tipo
-  \(3 : n\), in parole povere ogni elemento è "a modulo \(3\)"; con questa logica anche la somma
-  \( 2 + 2 = 4 \) sarà invece: 
+  \item chiusura rispetto alla sottrazione \\
+  \( \forall a,b \in S \quad a - b \in S \)
 
-  \[ 2 + 2 = 4 \mod 3 = 1\]
-
-  il risultato è infatti ancora in \( \mathbb{Z}_3 \)
-
-  \item \textbf{la somma è associativa} \\
-  l'operazione gode già della proprietà associativa in \(\mathbb{Z}\), poichè \(\mathbb{Z}_3\)
-  è un sottoinsieme di \(\mathbb{Z}\) "erediterà" quesa proprietà.
-
-  \item \textbf{la somma è commutativa} \\
-  come prima, l'operazione in \( \mathbb{Z}\) gode già della commutatività, lo farà anche
-  in \(\mathbb{Z}_3\).
-
-  \item \textbf{esistenza dell'elemento neutro \(0\)} \\
-  in questo insieme, come anche in \(\mathbb{Z}\), qualsiasi numero \(n\) sommato a \(0\) 
-  darà comunque \(n\).
-
-  \item \textbf{esistenza dell'elemento inverso secondo la somma} \\
-  in questi tipi di insiemi l'inverso di un numero si trova facilmente facendo \((n - a)\) dove 
-  \(n\) è la cardinalità dell'insieme e \(a\) il numero di cui vogliamo trovare l'inverso; infatti
-  se volessimo l'inverso di \(2\):
-
-  \[ 3 - 2 = 1 \implies 2 + 1 = 3 \mod 3 = 0\]
-
+  \item chiusura rispetto alla moltiplicazione \\
+  \( \forall a,b \in S \quad a \cdot b \in S \)
 \end{itemize}
-
 
 \end{document}
