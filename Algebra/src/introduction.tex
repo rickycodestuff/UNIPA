@@ -65,7 +65,9 @@ Ogni insieme "al di sopra" di un altro eredediterà gli elementi di quello "al d
 introduciamo così i \textbf{sottoinsiemi}. \\
 Se tutti gli elementi di un insieme \(A\) appartengono anche ad un insieme \(B\) allora
 possiamo dire che \(A\) è un \textbf{sottoinsieme} di \(B\); indichiamo questo scenario
-con la notazione \(A \subseteq B\).
+con la notazione \(A \subseteq B\). Parleremo invece di \textbf{sottoinsieme proprio}
+quando l'insieme \(A\) \underline{non coincide} con l'insieme \(B\); questo verrà indicato
+con la notazione \(A \subset B\).
 \\
 \\
 Continuiamo però con le nozioni di base parlando delle \textbf{operazioni}; 
@@ -239,4 +241,36 @@ di somma e prodotto, e che queste godono delle proprietà già citate, diremo ch
   \( \forall a,b \in S \quad a \cdot b \in S \)
 \end{itemize}
 
+\subsubsection{Ideali}
+Questa tipologia di struttura algebrica è simile a quella di un sottoanello poichè
+anche gli \textbf{ideali} sono sottoinsiemi di anelli, ma seguono le proprie regole. \\
+Prendiamo la tupla \( (A, +, \cdot) \), dove \(A\) è un anello. Preso un sottoinsieme 
+\(I \subseteq A\) diremo che è un \textbf{ideale destro} se:
+
+\begin{itemize}
+  \item \( (I, +) \) è un sottogruppo di \( (A, +) \)
+  \item \( \forall i \in I \quad i \cdot a \in I \)
+\end{itemize}
+
+al contrario, diremo che \(I\) è un \textbf{ideale sinistro} se:
+
+\begin{itemize}
+  \item \( (I, +) \) è un sottogruppo di \( (A, +) \)
+  \item \( \forall i \in I \quad a \cdot i \in I \)
+\end{itemize}
+
+Nel caso in cui \(A\) è un \textbf{anello commutativo} non faremo nessuna distinzione
+tra ideale sinistro o destro e diremo solo che \(I\) è un \textbf{ideale}.
+\\
+\\
+Useremo invece il termine \textbf{ideale proprio} quando un ideale \(I\) è un
+sottoinsieme proprio di \(A\) (\( I \subset A\)); ne segue che un anello \(A\) può avere
+infiniti ideali propri \(I_n\), ma tra tutti questi solo uno è l'\textbf{ideale massimale},
+overo un ideale proprio che non è contenuto in nessun altro ideale proprio. \\
+Questo tipo di ideale si chiama così perché è il "soffitto" di tutti gli ideali \(I_n\):
+oltre lui c'è soltanto l'anello padre \(A\).
+\\
+\\
+Infine chiameremo \textbf{ideale primo} quel tipo di ideale proprio in cui vale:
+\[ \forall a,b \in A \quad a \cdot b \in I \implies a \in I \lor b \in I\]
 \end{document}
