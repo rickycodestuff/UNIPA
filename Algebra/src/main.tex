@@ -5,6 +5,8 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[export]{adjustbox}
+\usepackage{subfiles}
+\usepackage{titling}
 
 \title{Algebra}
 \author{Riccardo Di Michele}
@@ -241,7 +243,7 @@ di somma e prodotto, e che queste godono delle proprietà già citate, diremo ch
   \( \forall a,b \in S \quad a \cdot b \in S \)
 \end{itemize}
 
-\subsubsection{Ideali}
+\subsection{Ideali}
 Questa tipologia di struttura algebrica è simile a quella di un sottoanello poichè
 anche gli \textbf{ideali} sono sottoinsiemi di anelli, ma seguono le proprie regole. \\
 Prendiamo la tupla \( (A, +, \cdot) \), dove \(A\) è un anello. Preso un sottoinsieme 
@@ -273,4 +275,7 @@ oltre lui c'è soltanto l'anello padre \(A\).
 \\
 Infine chiameremo \textbf{ideale primo} quel tipo di ideale proprio in cui vale:
 \[ \forall a,b \in A \quad a \cdot b \in I \implies a \in I \lor b \in I\]
+
+\input{"relazioni tra insiemi.tex"}
+
 \end{document}
