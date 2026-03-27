@@ -1,4 +1,5 @@
 \section{Relazioni tra insiemi}
+\subsection{Funzioni}
 Ancora una volta mi vedo costretto a rimarcare concetti basilari, al solo
 scopo di avere un testo pulito e chiaro. \\
 Procederò con lo spiegare cosa è una \textbf{funzione}.
@@ -7,29 +8,37 @@ Procederò con lo spiegare cosa è una \textbf{funzione}.
 Abbiamo parlato ampiamente di insiemi, cosa sono, come si comportano quando
 soggetti a delle operazioni e tanto altro. Adesso però parleremo delle 
 \textbf{relazioni tra insiemi}. \\
-Prendiamo l'insieme \(Cesto = \{Mela, Arancia, Banana\}\), ovvero la frutta
-all'interno di un cesto, e l'insieme 
-\( Colori = \{Rosso, Arancione, Giallo, Verde\}\),
-una semplice raccolta di colori. Definiamo allora una \textbf{funzione} \(f\)
-che "mette in relazione" i due insieme, in questo caso, defineremo \(f\) come
-\[ f(\text{frutta}) = \text{colore di frutta} \]
-Usando i due insiemi appena definiti vedremo che la nostra funzione si comporta
-nel seguente modo:
+Prendiamo l'insieme \(Italiano = \{Pane, e, Burro\}\) e l'insieme 
+\( Inglese = \{Bread, and, Butter, Jelly\}\).
+Definiamo allora una \textbf{relazione} \(f\)
+che "collega" i due insieme, in questo caso, defineremo \(f\) come:
+\[ f(\text{italiano}) = \text{inglese} \]
+Usando le due strtture di prima vedremo una la prima viene "trasformata" grazie
+ad \(f\):
 \begin{align*}
-  f(\text{Mela}) &= \text{Rosso} \\
-  f(\text{Arancia}) &= \text{Arancione} \\
-  f(\text{Banana}) &= \text{Giallo}
+  f(\text{Pane}) &= \text{Bread} \\
+  f(\text{e}) &= \text{and} \\
+  f(\text{Burro}) &= \text{Butter}
 \end{align*} 
-La nostra funzione \(f\) ha \emph{messo in relazione} \underline{ciascun}
-elemento dell'insieme \(Cesto\) con un altro dell'insieme \(Colori\); notare
-come non tutti gli elementi di \(Colori\) sono "collegati" a elementi di 
-\(Cesto\), la cosa importante è che \underline{ogni} elemento del primo 
-insieme sia collegato ad almeno un elemento del secondo. \\
-Abbiamo appena definito un \textbf{morfismo}.
+Abbiamo così \emph{messo in relazione} \underline{ciascun}
+elemento dell'insieme \(Italiano\) con un altro dell'insieme \(Inglese\); notare
+come non tutti gli elementi di \(Inglese\) sono "collegati" a elementi di 
+\(Italiano\), la cosa importante è che \underline{ogni} elemento del primo 
+insieme sia collegato ad \underline{un solo} elemento del secondo. \\
+Abbiamo appena definito una \textbf{funzione}, ovvero una relazione tra un insieme
+di partenza (\textbf{dominio}) e uno di arrivo (\textbf{codominio}), in cui 
+ogni elemento del dominio è collegato ad uno ed un solo elemento del codominio. \\
+Algebricamente parlando, diremo inoltre che siamo di fronte ad un \textbf{morfismo},
+poichè la funzione \(f\) non ha alterato le caratterische delle strutture; se 
+per esempio la nostra funzione avesse cambiato l'ordine delle parole tradotte sarebbe
+comunque considerata una funzione, ma poichè ha cambiato le caratterische della strttura
+allora non si considera \textbf{morfismo}.
 \\
 \\
 In modo generale diremo quindi che un \textbf{morfismo} \(f\) è un processo che
-trasforma una struttura di partenza \(A\) in una diversa strttura \(B\); nulla
+trasforma una struttura di partenza \(A\) in una diversa strttura \(B\), 
+mantenendo le caratterische delle strutture; 
+nulla
 toglie al processo di "trasformare" una strttura in sè stessa. \\
 Di seguito vederemo vari tipi di morfismi.
 
@@ -43,5 +52,5 @@ stessa di quella definita prima, quindi passerò direttamente a fare un esempio.
 \\
 Sia \(f: \mathbb{N} \to \mathbb{Z} \), ovvero una funzione che associa 
 ogni elemento dell'insieme dei numeri naturali con un elemento 
-dei numeri interi, e sia \(f = x \cdot -1\), ovvero una funzione che ad ogni
+dei numeri interi, e sia \(f = x \cdot (-1)\), ovvero una funzione che ad ogni
 elemento di \(\mathbb{N}\) moltiplica \(-1\). \\
