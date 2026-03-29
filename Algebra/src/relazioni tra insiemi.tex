@@ -11,10 +11,11 @@ soggetti a delle operazioni e tanto altro. Adesso però parleremo delle
 Prendiamo l'insieme \(Italiano = \{Pane, e, Burro\}\) e l'insieme 
 \( Inglese = \{Bread, and, Butter, Jelly\}\).
 Definiamo allora una \textbf{relazione} \(f\)
-che "collega" i due insieme, in questo caso, defineremo \(f\) come:
+che "collega" i due insieme, in questo caso, defineremo \(f\) come una relazione
+che ad ogni parola italiana associa la sua controparte inglese:
 \[ f(\text{italiano}) = \text{inglese} \]
-Usando le due strtture di prima vedremo una la prima viene "trasformata" grazie
-ad \(f\):
+Usando le due strtture di prima vedremo che la strttura \(Italiano\) 
+viene "trasformata" grazie alla relazione \(f\) nel seguente modo:
 \begin{align*}
   f(\text{Pane}) &= \text{Bread} \\
   f(\text{e}) &= \text{and} \\
@@ -23,11 +24,22 @@ ad \(f\):
 Abbiamo così \emph{messo in relazione} \underline{ciascun}
 elemento dell'insieme \(Italiano\) con un altro dell'insieme \(Inglese\); notare
 come non tutti gli elementi di \(Inglese\) sono "collegati" a elementi di 
-\(Italiano\), la cosa importante è che \underline{ogni} elemento del primo 
+\(Italiano\), la cosa importante infatti è che \underline{ogni} elemento del primo 
 insieme sia collegato ad \underline{un solo} elemento del secondo. \\
 Abbiamo appena definito una \textbf{funzione}, ovvero una relazione tra un insieme
 di partenza (\textbf{dominio}) e uno di arrivo (\textbf{codominio}), in cui 
-ogni elemento del dominio è collegato ad uno ed un solo elemento del codominio. \\
+ogni elemento del dominio è collegato ad uno ed un solo elemento del codominio.
+\\
+\\
+Se poi la funzione \(f\) associa \textbf{distinti} elementi del dominio
+a distinti elementi del codominio saremo di fronte ad una 
+\textbf{funzione iniettiva}; se invece \underline{ogni} elemento del codominio
+è associato ad almeno un elemento del dominio indicheremo \(f\) come
+\textbf{funzione suriettiva}. \\
+Quando \(f\) gode delle due caratterische appena enunciate sarà allora una
+\textbf{funzione biettiva}
+
+\subsection{Morfismi}
 Algebricamente parlando, diremo inoltre che siamo di fronte ad un \textbf{morfismo},
 poichè la funzione \(f\) non ha alterato le caratterische delle strutture; se 
 per esempio la nostra funzione avesse cambiato l'ordine delle parole tradotte sarebbe
@@ -38,19 +50,64 @@ allora non si considera \textbf{morfismo}.
 In modo generale diremo quindi che un \textbf{morfismo} \(f\) è un processo che
 trasforma una struttura di partenza \(A\) in una diversa strttura \(B\), 
 mantenendo le caratterische delle strutture; 
-nulla
-toglie al processo di "trasformare" una strttura in sè stessa. \\
-Di seguito vederemo vari tipi di morfismi.
+nulla toglie al processo di "trasformare" una struttura in sè stessa. \\
+In seguito vederemo vari tipi di morfismi.
 
 \subsection{Omomorfismi}
-Come detto prima un morfismo è una trasformazione riguardanti strtture;
+Come detto prima un morfismo è una trasformazione riguardanti strutture;
 ma questo termine è molto generico. \\
-Indicheremo quindi col termine \textbf{omomorfismo} quel tipo di morfismo 
-riguardante \textbf{strtture algebriche}. La definizione è praticamente la
-stessa di quella definita prima, quindi passerò direttamente a fare un esempio.
+Consideriamo le due strutture algebriche \(A\) e \(B\) dove sono
+definite rispettivamente le operazioni \(\star\) e \(\odot\)
+(che possono essere anche operazioni identiche)
+e consideriamo la funzione \(\phi : A \to B\) che mette in relazione i due insiemi.
+Diremo quindi che \(\phi\) è un \textbf{omomorfismo} se vale:
+\[ 
+  \phi( \underbrace{a \star b}_{\text{operazione in A}} ) 
+  = 
+  \underbrace{\phi(a) \odot \phi(b)}_{\text{operazione in B}}
+  \quad \forall a,b \in A
+\]
+Proseguiamo con un esempio pratico.
 \\
 \\
-Sia \(f: \mathbb{N} \to \mathbb{Z} \), ovvero una funzione che associa 
-ogni elemento dell'insieme dei numeri naturali con un elemento 
-dei numeri interi, e sia \(f = x \cdot (-1)\), ovvero una funzione che ad ogni
-elemento di \(\mathbb{N}\) moltiplica \(-1\). \\
+Sia \(g: \mathbb{N} \to \mathbb{Z}\) definita come \(g = x \cdot (-1)\), verifichiamo
+quindi se \(g\) è un omomorfismo rispetto alla somma: 
+\begin{align*}
+  g(a + b) &= (a + b) \cdot (-1) = -a -b \\
+  g(a) + g(b) &= a \cdot (-1) + b \cdot (-1) = -a -b 
+\end{align*}
+Poichè i risultati combaciano siamo di fronte ad un omomorfismo secondo la somma. \\
+Facciamo lo stesso controllo secondo la moltiplicazione:
+\begin{align*}
+  g(a \cdot b) &= (ab) \cdot (-1) = -ab \\
+  g(a) \cdot g(b) &= a \cdot (-1) \cdot b \cdot (-1) = ab 
+\end{align*}
+In questo caso invece i risultati non combaciano quindi \(g\) non è un 
+omomorfismo secondo la moltiplicazione.
+
+\subsection{Isomorfismi}
+Definieremo un \textbf{isomorfismo} una funzione \(f:A \to B\) 
+\textbf{biettiva} dove sia \(f\) che la sua \textbf{inversa}
+\(f^{-1}\) sono omomorfismi; di seguito un esempio.
+\\
+\\
+Consideriamo i due insiemi (\( \mathbb{R^+}, \cdot \))
+e (\( \mathbb{R}, + \)), rispettivamente dominio e codominio della 
+funzione \(f(x) = \ln{(x)}\) avente come sua \textbf{inversa} la funzione
+\(f^{-1}(x) = e^x\). Verifichiamo quindi che entrambe siano omomorfismi:
+\begin{gather*}
+  f(a \cdot b) = f(a) + f(b)
+  \\  \downarrow \\
+  \ln(a \cdot b) = \ln(a) + \ln(b)
+\end{gather*}
+Sempre vera poichè \emph{proprietà dei logaritmi}. \\
+Controlliamo adesso la sua inversa, che avrà quindi dominio e codominio invertiti:
+\begin{gather*}
+  f^{-1}(a + b) = f^{-1}(a) \cdot f^{-1}(b)
+  \\ \downarrow \\
+  e^{a+b} = e^a \cdot e^b
+\end{gather*}
+Ancora una volta: sempre vera poichè proprietà degli esponenziali.\\
+Sia \(f\) che \(f^{-1}\) sono omomorfismi, di conseguenza \(f = \ln x\) è
+un \textbf{isomorfismo}; per logica anche \(f = e^x\) sarà anch'essa un 
+isomorfismo.
