@@ -51,6 +51,33 @@ come \textbf{sottogruppo} di \(G\) se:
   
 \end{itemize}
 
+\subsubsection{Gruppo quoziente}
+Per poter parlare del \emph{grupo quoziente} è doveroso precisare cosa è
+un \textbf{sottogruppo normale} (o \textbf{invariante}). \\
+Preso un gruppo \(G\) e un suo sottogruppo \(H\) diremo che \(H\) è un 
+sottogruppo normale se le sue \emph{classi laterali} destra e sinistra coincidono. \\
+Cosa intendiamo per \textbf{classi laterali} allora? \\
+Poichè \(G\) è un gruppo sappiamo che al suo interno è definita una 
+operazione binaria \(\star\). Prendiamo quest'ultima e fissiamo un elemento 
+\(g_k \in G\), la classe laterale \textbf{sinistra} del sottogruppo \(H\) saranno tutti
+gli elementi del tipo:
+\begin{align*}
+  g_kH = \{ g_k \star h \} \quad \forall h \in H
+\end{align*}
+Analogamente, la classe laterale \textbf{destra} sarà l'insieme degli elementi
+del tipo:
+\begin{align*}
+  Hg_k = \{ h \star g_k \} \quad \forall h \in H
+\end{align*}
+Continuando a verificare queste relazioni per ogni \(g \in G\)
+otterremmo \textbf{tutte} le possibili classi laterali del sottogruppo \(H\),
+e se ogni classe sinistra \(g_kH\) coincide con la rispettiva classe destra
+\(Hg_k\) allora diremo che \(H\) è un \textbf{sottogruppo normale}.
+\\
+\\
+Il \textbf{gruppo quoziente} sarà quindi l'insieme di tutte le classi 
+laterali di un sottogruppo \(H\) e si indica come \(G/H\) ("\emph{G su H}").
+
 \subsection{Anelli e sottoanelli}
 Dopo aver definito \emph{gruppo} e \emph{sottogruppo} possiamo 
 procedere con un'altra struttura algebrica: l'\textbf{anello}.
