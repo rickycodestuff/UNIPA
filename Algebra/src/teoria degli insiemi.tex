@@ -1,0 +1,103 @@
+\section{Teoria degli insiemi}
+Iniziamo con delle nozioni molto basilari. \\
+Definiamo un \emph{\textbf{insieme}} come una raccolta di elementi. Le persone all'interno
+di uno stadio sono un \emph{insieme}, gli snack all'interno della mia dispensa sono un
+\emph{insieme} e, come vedremo, anche i numeri fanno parte di un \emph{insieme}. \\
+Indicheremo quindi un insieme come: 
+\[
+  A = \{0, 1, 2, 3, 4, 5 \}
+\]
+
+Il numero degli elementi all'interno di un insieme prende il nome di \textbf{cardinalità}
+(si usa anche il termine \textbf{ordine}) e può essere \emph{finito} o \emph{infinito}; nell'esempio di prima useremo quindi la
+notazione \(|A| = 5\) per indicare la cardinalità dell'insieme.
+\\
+\\
+Di conseguenza possiamo cominciare a parlare in maniera più generale di insiemi.
+Se continuassimo a "estendere" l'insieme \(A\) citato prima otteremo un insieme
+del tipo: 
+\[
+  A = \{0, 1, 2, 3, \dots \infty \}
+\]
+
+Non a caso quello che abbiamo appena scritto prende il nome di 
+\textbf{insieme dei numeri naturali}, indicato come \( \mathbb{N} \). \\
+Ma i numeri non sono soltanto positivi, nè tanto meno sono solo interi.
+Estendendo infatti passo dopo passo questo primo insieme otteremo tutti gli 
+insiemi più conosciuti:
+
+\begin{itemize}
+  \item \( \mathbb{N} = \{0, 1, 2, 3 \dots \infty \} \) \\ 
+  \textbf{Insieme dei numeri naturali},
+  che contiene tutti i numeri interi positivi
+  \item \( \mathbb{Z} = \{ -\infty, \dots -2, -1, 0, 1, 2, 3 \dots \infty \} \) \\ 
+  \textbf{Insieme dei numeri interi},
+  che contiene tutti i numeri interi, compresi i negativi
+  \item \( \mathbb{Q} = \{ -\infty, \dots -2, -1, -\frac{1}{2}, 0, 1, 1.5, 2, 3 \dots \infty \} \) \\ 
+  \textbf{Insieme dei numeri razionali},
+  che contiene tutti i numeri espremibili sottoforma di \( \frac{a}{b} \)
+  \item \(\mathbb{R} = \{ -\infty, \dots + \infty\}\) \\
+  \textbf{Insieme dei numeri reali},
+  che contiene "tutti" i numeri, interi, decimali, razionali, positivi e negativi
+  \item \( \mathbb{C} = \{ -\infty, \dots 1, 1 +i, 2 +2i, \dots \infty \} \) \\
+  \textbf{Insieme dei numeri complessi},
+  che contiene l'insieme dei numeri reali esteso grazie all'unità immaginaria \(i\)
+\end{itemize}
+
+Importante specificare che la lista qui sopra è una vera e propria \emph{gerarchia degli insiemi}.
+Ogni insieme "al di sopra" di un altro eredediterà gli elementi di quello "al di sotto";
+introduciamo così i \textbf{sottoinsiemi}. \\
+Se tutti gli elementi di un insieme \(A\) appartengono anche ad un insieme \(B\) allora
+possiamo dire che \(A\) è un \textbf{sottoinsieme} di \(B\); indichiamo questo scenario
+con la notazione \(A \subseteq B\). Parleremo invece di \textbf{sottoinsieme proprio}
+quando l'insieme \(A\) \underline{non coincide} con l'insieme \(B\); questo verrà indicato
+con la notazione \(A \subset B\).
+\\
+\\
+Continuiamo però con le nozioni di base parlando delle \textbf{operazioni}; 
+per molti sembrerà ovvio ma per il fine di aver un testo "preparato a tutto" spiegherò anche
+cosa è una \emph{operazione aritmetica}. \\
+Presi due numeri (per il momento immaginiamo di essere nell'insieme dei numeri reali),
+che chiameremo "\textbf{operandi}", otteremo un terzo numero, detto "\textbf{risultato}" che
+cambierà in base alla \textbf{operazione aritmetica} scelta. \\
+Tra queste operazioni, come già sappiamo, troviamo: \textbf{addizione} (\(+\)), 
+\textbf{sottrazione} (\(-\)), \textbf{moltiplicazione} (\(\times\))
+e \textbf{divisione} (\(\div\)). \\
+Abbiamo posto come esempio l'insieme dei numeri reali, ma in realtà quando parliamo di operazioni
+è importante specificare in quale insieme siamo poichè non tutte sono definite allo stesso
+modo in ogni insieme.
+Usando l'esempio della divisione e moltiplicazione nei numeri naturali capiremo meglio cosa intendo.
+\\
+Definiamo la \emph{divisione} come l'operazione inversa della \emph{moltiplicazione}, per tanto:
+\[ 3 \times 2 = 6 \implies 6 \div 2 = 3 \]
+
+Fin qui nulla di nuovo ovviamente, abbiamo preso due \emph{operandi} appartenenti ai numeri naturali
+(\(3\) e \(2\)) e abbiamo ottenuto un \emph{risultato} naturale (\(6\)). Proviamo però a scambiare
+l'ordine di questa operazione:
+
+\[ 3 \div 6 = ? \]
+
+Il nostro cervello però sa benissimo il risultato di questa operazione, poichè già da piccoli siamo
+stati abituati a calcolare usando indirettamente l'insieme dei numeri reali; ma adesso non siamo
+in quell'insieme e il risultato \(3 \div 6 = 0.5\) \textbf{non rientra} nei numeri naturali.
+Poichè abbiamo definito la divisione come operazione inversa della moltiplicazione, possiamo anche
+usare il contro esempio dell'espressione
+
+\[ 0.5 \times 6 = ?\]
+
+Questa è ovviamente un'espressione \textbf{non valida} nell'insieme naturale poichè presenta
+un operando non naturale (\(0.5\)). \\
+Questa logica si applica pure alle \textbf{proprietà} delle operazioni. Continuando con l'esempio
+della moltiplicazione, possiamo dire che questa operazione gode della \textbf{proprietà dell'inverso}
+nell'insieme dei numeri reali; ovvero:
+\[
+  \forall x \in \mathbb{R} \setminus \{0\} \quad
+  \exists !x \backepsilon x \times \frac{1}{x} = 1
+\]
+
+La stessa cosa però non possiamo invece dirla nell'insieme dei numeri interi poichè il 
+valore \(\frac{1}{x}\) non è un valore intero, di conseguenza non vale questa proprietà in quell'insieme. \\
+\\
+Ricapitolando tutto quello che abbiamo detto. \\
+Definendo una qualsiasi operazione \(\star\), per essere valida, dobbiamo anche definire l'insieme 
+\(A\) dove "opera" e, di conseguenza, le sue proprietà in quell'insieme.
