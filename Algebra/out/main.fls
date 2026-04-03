@@ -186,19 +186,21 @@ INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1095.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
 INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT .\strutture algebriche.tex
-INPUT .\strutture algebriche.tex
-INPUT .\strutture algebriche.tex
-INPUT .\strutture algebriche.tex
-INPUT strutture algebriche.tex
-INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
 INPUT .\relazioni tra insiemi.tex
 INPUT .\relazioni tra insiemi.tex
 INPUT .\relazioni tra insiemi.tex
 INPUT .\relazioni tra insiemi.tex
 INPUT relazioni tra insiemi.tex
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
+INPUT .\strutture algebriche.tex
+INPUT .\strutture algebriche.tex
+INPUT .\strutture algebriche.tex
+INPUT .\strutture algebriche.tex
+INPUT strutture algebriche.tex
+INPUT .\teorema cinese.tex
+INPUT .\teorema cinese.tex
 INPUT .\teorema cinese.tex
 INPUT .\teorema cinese.tex
 INPUT teorema cinese.tex

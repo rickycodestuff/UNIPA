@@ -1,54 +1,15 @@
 \section{Teorema cinese del resto}
-\subsection{Relazioni d'quivalenza}
-Come abbiamo già visto adesso sappiamo analizzare come due elementi
-(insieme o numeri) pososno essere \emph{messi in relazione} tra di loro.
-Le \textbf{congruenze} non sono da meno, detto in parole parole povere: 
-se \(a\) è \textbf{congruo} a \(b\) allora vuol dire che i due elementi 
-si comportano allo "stesso modo" secondo un certo divisore \(n\).
-\[ a \equiv b \mod n\]
-Formalmente diremo che dati due numeri interi \(a\) e \(b\), e un numero
-\underline{positivo intero} \(n\) (detto \textbf{modulo}), \(a\) sarà 
-congruo a \(b\) se \(a - b = kn\), ovvero se la differenza dei due numeri
-è un numero multiplo del modulo; semplicemente parlando, i due numeri 
-saranno congruenti se divisi per il modulo danno lo stesso resto.
-\begin{align*}
-  17 \equiv 5 &\mod 6 \\
-  23 \equiv 3 &\mod 4 \\
-  157 \equiv 7 &\mod 10 \\
-  2 \equiv 2 &\mod 4 \\
-  72 \equiv 12 &\mod 3
-\end{align*}
-La congruenza è un tipo di relazione particolare poichè gode delle seguenti 
-proprietà:
-\begin{itemize}
-  \item \textbf{proprietà rilfessiva} \\
-  \[ a \equiv a \mod n  \]
-  \item \textbf{proprietà simmetrica} \\
-  \[ a \equiv b \mod n \implies b \equiv a \mod n \]
-  \item \textbf{proprietà transitiva} \\
-  \[ a \equiv b \mod n \quad \land \quad b \equiv c \mod n \implies a \equiv c \mod n\]
-\end{itemize}
-Le relazioni che godono di queste tre proprietà prendono il nome di 
-\textbf{relazioni d'quivalenze}. \\
-Una particolarità di questo tipo di relazioni è che "dividono" tutto l'insieme
-in cui sono definite in modo tale che \underline{ogni} elemento è all'interno
-di un sotto insieme, o meglio, all'interno di una \textbf{classe d'equivalenza}.
-\\
-\\
-Prendiamo il seguente esempio:
-\[ [x]_4 = \{ y,x \in \mathbb{Z}^+ \quad | \quad y \equiv x \mod 4 \}\]
-Con la notazione \([x]\) intendiamo una classe d'quivalenza e l'elemento 
-all'interno delle parentesi è il \textbf{rappresentante della classe}; in questo
-caso ho anche aggiunto \(4\) come pedice, solo per distinguerlo da altre possibili 
-classi del tipo \([x]\), così da far capire che parliamo degli elementi sotto modulo 4. \\
-Da questa relazione nasceranno quattro classi d'equivalenza:
-\begin{itemize}
-  \item \([0] = \{ 4, 8, 12, 16 ... \}\) tutti i multipli di 4
-  \item \([1] = \{ 5, 9, 13, 17 ... \}\) i numeri con \emph{resto} 1
-  \item \([2] = \{ 6, 10, 14, 18 ... \}\) i numeri con \emph{resto} 2
-  \item \([3] = \{  7, 11, 15, 19 ...\}\) i numeri con \emph{resto} 3
-\end{itemize}
-piccola nota: in questo caso con "resto" intendo quanto "manca" al risultato 
-della divisione \(n / 4\) per "raggiunere" il \(4\); per esempio \(5/4 = 1\) 
-quindi rientra nella classe \([1]\) poichè "manca" un solo passo per 
-arrivare a \(4\).
+Preso un sistema di \textbf{congruenze} del tipo
+\begin{equation*}
+  \begin{cases}
+    x \equiv a_1 \mod n_1 \\
+    x \equiv a_2 \mod n_2 \\
+    x \equiv a_3 \mod n_3 \\
+  \end{cases}
+\end{equation*}
+dove \(a_i\) sono numeri interi ed i \(n_i\) sono a due e due \textbf{coprimi} 
+(ovvero non sono multipli tra di loro), il teorema assicura che
+il sistema ammette soluzioni. \\
+Vorrei precisare che il teorema ci da una condizione \textbf{sufficciente}, non
+necessaria, questo vuol dire che un sistema dove i \(n_i\) \underline{non} sono
+coprimi tra di loro potrebbe comunque ammettere soluzioni. 
