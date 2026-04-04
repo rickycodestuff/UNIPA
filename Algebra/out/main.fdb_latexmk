@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1775217274.47352 "d:/UNIPA/LaTeX/Algebra/src/main.tex" "d:/UNIPA/LaTeX/Algebra/out/main.pdf" "main" 1775217275.0863 0
+["pdflatex"] 1775292915.80092 "d:/UNIPA/LaTeX/Algebra/src/main.tex" "d:/UNIPA/LaTeX/Algebra/out/main.pdf" "main" 1775292917.03621 0
   "C:/Users/ricca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1774612191 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ricca/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbi1095.pk" 1762606138 38336 1a8272b4842867aafa0f0c26ff52149f ""
   "C:/Users/ricca/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1762527879 28976 452a0992c28965356ad0c969800f66ee ""
@@ -111,12 +111,12 @@
   "C:/Users/ricca/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/ricca/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/ricca/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "d:/UNIPA/LaTeX/Algebra/out/main.aux" 1775217274 1782 cae670a1f120a8a38d453b5d32bb1452 "pdflatex"
-  "d:/UNIPA/LaTeX/Algebra/out/main.out" 1775217274 1839 5c28fe46f6a2f5c39d2e27aecb564480 "pdflatex"
+  "d:/UNIPA/LaTeX/Algebra/out/main.aux" 1775292916 1895 0d2aa7de1a8aad3b7d7c16a0a6acd6f0 "pdflatex"
+  "d:/UNIPA/LaTeX/Algebra/out/main.out" 1775292916 1922 39f18c8eed3527c69219d3af70a8767a "pdflatex"
   "d:/UNIPA/LaTeX/Algebra/src/main.tex" 1775216669 517 752d36a6272b603143a9e95593a7d35d ""
   "main.tex" 1775216669 517 752d36a6272b603143a9e95593a7d35d ""
   "relazioni tra insiemi.tex" 1775216553 8959 675e6963893b99090e45aa53ebcd81cb ""
-  "strutture algebriche.tex" 1775137556 7818 5dd21c4bdf8d3a4255eba68cd6fa0996 ""
+  "strutture algebriche.tex" 1775292914 8934 6fc9a3c7aba6e5774eba62383a8ff1d6 ""
   "teorema cinese.tex" 1775217274 645 b7bb38aae961d3fd094c680095ace625 ""
   "teoria degli insiemi.tex" 1775137556 5651 c99ebe98851c771dd8796b8ad6196561 ""
   (generated)
