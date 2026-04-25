@@ -1,0 +1,42 @@
+\section{Descrizione dei dati}
+Il \textbf{modello dei dati} è l'insieme delle tecniche e 
+dei costrutti usati per organizzare i dati e descriverne la loro natura. \\
+Per esempio il \textbf{modello relazionale} ci permette di costruire 
+\textbf{record} omogenei; vediamo un esempio.
+
+\begin{center}
+  \textbf{Orario} \\ \vspace{4px}
+  \begin{tabular}{|l|c|r|}
+    \hline
+    Insegnamento & Docente & Aula \\ \hline
+    Analisi I & Luigi Neri & N1 \\
+    Chimica & Piero Rossi & N2 \\ 
+    Basi di Dati & Angela Valenti & N3 \\
+    Fisica II & Vittorio Strano & N4 \\ \hline
+  \end{tabular}
+\end{center}
+
+La \emph{relazione} di cui parla il modello non è altro che l'intera 
+tabella Orario, ed è composta da righe omogenee, ovvero righe che hanno
+la stessa struttura: un \textbf{insegnamento}, un \textbf{docente} 
+e un \textbf{aula}. \\
+Sempre considerando la tabella possiamo adesso dare la definizione di 
+\textbf{tupla} o (\textbf{record}) e \textbf{attributo}: la prima non 
+è altro che una riga della tabella e la seconda è invece una colonna.
+\\
+\\
+In ogni base di dati possiamo individuare uno \textbf{schema}, ovvero 
+una \textit{descrizione} invariante nel tempo che descrive la struttura della
+relazione; nella relazione \textit{Orario} vista prima lo schema è l'insieme
+di \underline{tutti} gli attributi (ovvero le colonne della relazione). \\
+Troveremo inoltre l'\textbf{istanza}, che è invece variabile nel tempo, ovvero
+i valori della tabella stessa; la colonna \textit{Insegnamento} è per esempio una istanza.
+\\
+\\
+Abbiamo già parlato del \textit{modello relazionale}, ma questo tipo fa in
+realtà parte di una macro-categoria di modelli chiamati \textbf{modelli logici},
+che descrivrono i dati, e le relazioni tra loro, usando strutture "comprensibili" 
+ad un software (per esempio tramite \textbf{XML}). \\
+Un'altra catergoria è quella dei \textbf{modelli concettuali} che invece mirano 
+soltanto a rappresentare i dati a livello grafico, usando per esempio il famoso 
+\textbf{schema E-R}, \textit{Entità-Relazione}.

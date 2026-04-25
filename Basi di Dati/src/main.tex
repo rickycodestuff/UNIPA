@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage{subfiles}
+\usepackage{titling}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{er, positioning}
+
+% Definizione colori e stili
+\definecolor{headergray}{RGB}{189, 195, 199}
+\definecolor{backgroundpink}{RGB}{245, 185, 175}
+
+\tikzset{
+    % Stile per le tabelle (nodi multipart)
+    table/.style={
+        draw,
+        rectangle split,
+        rectangle split parts=2,
+        rectangle split part fill={headergray, white},
+        rounded corners,
+        thick,
+        minimum width=3.5cm,
+        font=\sffamily\small,
+        align=left
+    },
+    % Simbolo "Crow's Foot" per le relazioni (uno a molti)
+    crows foot/.style={
+        {Circle[open, length=4pt]}-{{font=\Large}|{Kite[length=6pt, width=8pt]}}
+    }
+}
+
+\title{Appunti su Basi di Dati}
+\author{Riccardo Di Michele}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\input{introduzione/introduzione.tex}
+\input{descrizione-dei-dati.tex}
+
+\end{document}
