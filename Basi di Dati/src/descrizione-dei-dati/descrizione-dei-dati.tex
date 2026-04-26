@@ -39,4 +39,32 @@ che descrivrono i dati, e le relazioni tra loro, usando strutture "comprensibili
 ad un software (per esempio tramite \textbf{XML}). \\
 Un'altra catergoria è quella dei \textbf{modelli concettuali} che invece mirano 
 soltanto a rappresentare i dati a livello grafico, usando per esempio il famoso 
-\textbf{schema E-R}, \textit{Entità-Relazione}.
+\textbf{schema E-R}, \textit{Entità-Relazione}. 
+\\ \\ \textbf{\textit{TODO METTI UNA FOTO DEL MODELLO ER}} \\
+
+Di seguito vedremo una archittetura molto comune per i DBMS, chiamata 
+archittetura \textbf{ANSI/SPARC}:
+
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{descrizione-dei-dati/ANSI.png}
+\end{center}
+
+Ogni schema dell'archittetura ha una sua funzione e soprattutto lavora 
+soltanto su una parte del database. \\
+Lo \textbf{schema esterno} è quello a cui si interfaccierà l'utente, di 
+conseguenza sarà molto "semplificato". Se per esempio prendiamo il sito di
+una università l'utente medio sarà uno studente, lo schema esterno lavorerà
+quindi (e farà vedere) soltanto sui voti di quello studente; il database
+dell'università ha ovviamente altri dati (nomi dei professori, eventi, 
+gli esami degli scorsi anni), ma farà solo vedere allo studente ciò che
+a lui davvero serve. \\
+Al cuore della struttura troviamo invece lo \textbf{schema logico}
+che descrive in modo concettuale quali sono i dati e le relazioni tra 
+quest'ultimi (per esempio tramite il \textit{modello ER}, come detto prima) \\
+L'ultimo è lo \textbf{schema interno} che descrive come sono 
+\textit{fisicamente} memorizzati questi dati e su quali dispostivi
+(\textit{HDD}, \textit{SDD} etc)
+\\
+Il punto forte di questa struttura è l'\textbf{indipendenza dei dati}, 
+infatti potremmo cambiare il modo in cui "descriviamo i dati" (schema logico),
+senza cambiare poi gli altri schemi o addirittura il database stesso.

@@ -1,7 +1,7 @@
-PWD d:\UNIPA\LaTeX\Basi di Dati\src
+PWD c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\src
 INPUT C:\Users\ricca\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\UNIPA\LaTeX\Basi di Dati\src\main.tex
-OUTPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.log
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\src\main.tex
+OUTPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.log
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
@@ -239,10 +239,10 @@ INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.aux
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.aux
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.aux
-OUTPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.aux
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.aux
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.aux
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.aux
+OUTPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.aux
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -251,14 +251,14 @@ INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
-OUTPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.pdf
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
-OUTPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
+OUTPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.pdf
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
+OUTPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
@@ -299,18 +299,37 @@ INPUT .\introduzione\cartelli.png
 INPUT .\introduzione\cartelli.png
 INPUT .\introduzione\cartelli.png
 INPUT .\introduzione\cartelli.png
-INPUT .\descrizione-dei-dati.tex
-INPUT .\descrizione-dei-dati.tex
-INPUT descrizione-dei-dati.tex
+INPUT .\descrizione-dei-dati\descrizione-dei-dati.tex
+INPUT .\descrizione-dei-dati\descrizione-dei-dati.tex
+INPUT descrizione-dei-dati\descrizione-dei-dati.tex
 INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.aux
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
-INPUT d:\UNIPA\LaTeX\Basi di Dati\out\main.out
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbi1095.tfm
+INPUT .\descrizione-dei-dati\ANSI.png
+INPUT .\descrizione-dei-dati\ANSI.png
+INPUT .\descrizione-dei-dati\ANSI.png
+INPUT .\descrizione-dei-dati\ANSI.png
+INPUT .\descrizione-dei-dati\ANSI.png
+INPUT .\descrizione-dei-dati\ANSI.png
+INPUT .\descrizione-dei-dati\ANSI.png
+INPUT .\interrogare\interrogare.tex
+INPUT .\interrogare\interrogare.tex
+INPUT interrogare\interrogare.tex
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1095.tfm
+INPUT .\personaggi\personaggi.tex
+INPUT .\personaggi\personaggi.tex
+INPUT personaggi\personaggi.tex
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.aux
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
+INPUT c:\Users\ricca\Desktop\UNIPA\LaTeX\Basi di dati\out\main.out
+INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
+INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
+INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1095.pk
+INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1095.pk
 INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
 INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
 INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk

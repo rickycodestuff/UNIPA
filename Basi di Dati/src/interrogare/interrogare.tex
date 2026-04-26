@@ -1,0 +1,38 @@
+\section{Interrogare il database}
+Abbiamo parlato di come descriviamo e come conserviamo 
+questi famigerati \textit{dati}, ma come lavoriamo su quest'ultimi? \\
+Useremo un linguaggio interattivo: \textbf{SQL}. Quest'ultimo
+è un linguaggio standard oramai per interfacciarsi con database e
+lo troveremo già incluso in tanti linguaggi come \textbf{C} 
+oppure \textbf{Pascal}.
+\\
+\\
+Il linguaggio è composto principalmente da due tipologie di operazioni:
+\textbf{DML} e \textbf{DDL}. \\
+Le operazioni di \textbf{Data Manipulation Language} manipolano 
+le istanze del databse, e quindi modificano i dati al suo interno;
+il secondo tipo di operazioni, \textbf{Data Definition Language}, 
+definiscono lo schema del database e come i dati si relazionino 
+tra di loro. \\
+Seguono degli esempi di, rispettivamente, operazione di DDL e DML
+
+\begin{verbatim}
+  CREATE TABLE orario (
+    insegnamento CHAR(20),
+    docente CHAR(20),
+    aula CHAR(4),
+    ora CHAR(5)
+  );
+\end{verbatim}
+
+\begin{verbatim}
+  INSERT INTO orario (insegnamento, docente, aula, ora)
+  VALUES ('Basi di dati', 'Mario Rossi', 'N1', '09:00');
+\end{verbatim}
+
+Questi esempi servono soltanto per avere un rapido chiarimento sulle
+differneze tra i due tipi di comandi, ovviamente una persona che non ha
+mai usato SQL avrà difficoltà a capire. Basta sapere che il primo comando
+\verb|CREATE TABLE| definisce lo schema della tabella \textit{orario},
+il secondo comando (\verb|INSERT INTO|), va invece a modificare questa 
+tabella aggiungendo dei nuovi dati.
