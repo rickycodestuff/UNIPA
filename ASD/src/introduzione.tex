@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{xcolor}
+\usepackage[ruled,lined,linesnumbered]{algorithm2e}
+
+\title{Algoritmi e strutture dati}
+\author{Riccardo Di Michele}
+
+\begin{document}
+\maketitle
+
+\section*{Introduzione}
+L'obbiettivo della materia è quello di studiare la 
+\textbf{complessità computazionale} degli algoritmi nel tempo; in questo 
+testo non andremo a spiegare le nozioni primitive dell'informatica (esempio:
+cosa è un algoritmo, una condizione if ecc.).
+Un esempio di complessità computazionale:
+
+\vspace{0.3cm}
+
+\begin{algorithm}[H]
+\SetKwData{MatA}{A}
+\SetKwData{MatB}{B}
+\SetKwData{MatC}{C}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+
+\TitleOfAlgo{CalcoloMatriceDistanzeManhattan(\MatA, \MatB, $n$)}
+
+\Input{Due array/vettori \MatA e \MatB ciascuno di $n$ numeri reali}
+\Output{Una matrice \MatC di dimensione $n \times n$ con le differenze}
+
+\BlankLine
+\For{$i \leftarrow 1$ \KwTo $n$}{
+    \For{$j \leftarrow 1$ \KwTo $n$}{
+        \MatC$[i, j] \leftarrow \MatA[i] \times \MatB[j] + i \times j$\;
+    }
+}
+\end{algorithm}
+
+\vspace{0.3cm}
+L'algoritmo appena mostrato ha costo computazionale $T(n) = n^2$, ma cosa 
+vuol dire e soprattutto come usiamo
+questa informazione a nostro vantaggio? \\
+Sapere il costo di un algortimo ci va in nostro aiuto per vari motivi: se 
+l'algoritmo è troppo costoso potremmo apportare dei cambiamenti, o addirittura
+scegliere un algortimo già esistente più efficiente di quello scelto prima, o 
+ancora, per capire quale è l'input più grande che l'algoritmo può "reggere" prima
+di perdere troppo tempo.
+\\
+\\
+Cominciamo allora a rispondere alla domanda più importante. \\
+Definiamo la \textit{complessità computazionale} come una funzione che 
+mappa la dimensione dell'input di un algortimo al suo "tempo" di calcolo
+\[ costo: input \to tempo \]
+
+Adesso dobbiamo però definire questo \textit{input} e questo \textit{tempo}. \\
+Il primo lo definiamo usando il \textbf{criterio del costo uniforme}, ovvero
+la dimensione dell'input dipende solo da quanti elementi ha quell'input;
+se prendiamo come esempio un array di 20 elementi il suo costo sarà di 
+$n = 20$. \\
+Definiamo il tempo invece come il numero di operazioni elementari, ovvero 
+operazioni che la macchina riesce a fare senza l'aiuto di altri operazioni.
+
+\begin{itemize}
+  \item $a = a + 1$ \textbf{operazione elementare}
+  \item $a = a - 1$ \textbf{operazione elementare}
+  \item $swap(A[1], A[2])$ \textbf{operazione elementare}
+  \item $sin(a)$ \textbf{operazione} considerata al giorno d'oggi \textbf{elementare}
+  \item $max(array, a)$ \textbf{operazione non elementare}
+\end{itemize}
+
+L'ultima operazione, ovvero la funzione $max()$ non viene considerata elementare
+poichè all'interno di essa (pure se non detto in maniera esplicita) avremo 
+\textbf{sicuramente} più di un'operazione elementare, come per esempio multeplici
+assegnazioni di variabili.
+\\ Con le informazioni acquisite possiamo adesso verificare il costo dell'algoritmo 
+citato prima:
+
+\vspace{0.3cm}
+
+\begin{algorithm}[H]
+\SetKwData{MatA}{A}
+\SetKwData{MatB}{B}
+\SetKwData{MatC}{C}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+
+\caption{CalcoloMatriceDistanzeManhattan(\protect\MatA, \protect\MatB, $n$)}
+
+\Input{Due array/vettori \MatA e \MatB ciascuno di $n$ numeri reali}
+\Output{Una matrice \MatC di dimensione $n \times n$ con le differenze}
+
+\BlankLine
+\For{$i \leftarrow 1$ \KwTo $n$}{
+    \For{$j \leftarrow 1$ \KwTo $n$}{
+        \MatC$[i, j] \leftarrow \MatA[i] \times \MatB[j] + i \times j$\;
+    }
+}
+\end{algorithm}
+
+\vspace{0.3cm}
+
+Per analizzare il codice cominciamo a partire dalle operazioni più interne,
+prendiamo l'operazione alla riga 3
+
+\[ C[i,j] \leftarrow A[i] \times B[j] + (i \times j) \]
+
+Il costo di questa riga sarebbe pari al numero di operazioni elementari al 
+suo interno, quindi 4; in questo caso diremmo che il \textbf{costo esatto} 
+è pari a $R3 = 4$. \\
+Andando a ritroso quindi analizziamo ora la parte di codice meno interna: 
+il \textit{ciclo for} che va da $R2$ a $R4$. Questo è un ciclo che va da
+$j \leftarrow 1$ a $j \leftarrow n$, quindi farà sempre $n$ cicli.
+Col costo della riga $R3$ possiamo quindi calcolare il costo di questo ciclo come:
+
+\[ \sum_{j \leftarrow 1}^{n} R3 \rightarrow n \cdot R3 \]
+
+Con la stessa logica analizziamo infine il ciclo più esterno, quello tra 
+$R1$ e $R5$; in questo caso la varaibile contatore è $i$, ma la logica, e il 
+numero di cicli, non cambia affatto.
+
+\[ 
+\sum_{i \leftarrow 1}^{n} \sum_{j \leftarrow 1}^{n} R3 
+\rightarrow n \cdot n \cdot R3 \rightarrow
+n^2 \cdot R3
+\]
+
+Ma nella maggior parte dei nostri esercizi il costo esatto non ci 
+interessa proprio, ci interessa invece il \textbf{costo asintotico}, ovvero
+il costo dell'algoritmo considerando un input $n$ sempre più grande. \\
+Poichè il costo di $R3$ è un costo \textit{fisso}, non dipendente dalla grandezza
+dell'input $n$, nel \textbf{calcolo asintotico} diventa un dato insignificante,
+è per questo che in tanti esercizi lo troviamo scritto come $c$; il calcolo 
+di prima diventer allora:
+
+\[ 
+\sum_{i \leftarrow 1}^{n} \sum_{j \leftarrow 1}^{n} c 
+\rightarrow n \cdot n \cdot c \rightarrow
+c \cdot n^2 \rightarrow n^2 = T(n)
+\]
+
+Per lo stesso motivo viene direttamente omesso il valore $c$ quando 
+raggiungiamo il risultato finale.
+
+
+\end{document}
