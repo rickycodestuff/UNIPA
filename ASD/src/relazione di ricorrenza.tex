@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{xcolor}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+% Definizione dei colori per evidenziare le sezioni
+\definecolor{basecolor}{RGB}{180, 0, 0}      % Rosso per il Caso Base
+\definecolor{bodycolor}{RGB}{0, 100, 180}    % Blu per il Corpo
+\definecolor{recurcolor}{RGB}{0, 130, 50}    % Verde per la Ricorsione
+
+\begin{document}
+
+\title{Algoritmi ricorsivi}
+\author{Riccardo Di Michele}
+\maketitle
+
+\section*{Costo di un algoritmo ricorsivo}
+Partiamo dalle basi, visto che la professoressa ci tiene. \\
+Un \textbf{algoritmo} è un insieme di passaggi elementari e non ambigui 
+che hanno come scopo la risoluzione di
+un problema algoritmico, ovvero un problema risolvibili in un numero
+finito di passaggi.
+Un \textbf{algoritmo ricorsivo} è invece un algoritmo che 
+\textit{richiama se stesso}, più nello specifico, la struttura di questo
+tipo di algoritmo presenta: \textbf{caso base}, ovvero la condizione che
+ci fa "uscire" dal ciclo di chiamate ricorsive, il \textbf{corpo}, gli
+effettivi passagi che l'algoritmo esegue ad ogni iterazione, e le 
+\textbf{chiamate} alla stessa funzione, con input 
+di \textit{inferiore dimensione}.
+
+\vspace{0.3cm}
+
+\begin{algorithm}[H]
+\caption{Search the value $v$ among the $n$ ordered elements of $S$}
+\SetKwFunction{FBinarySearch}{BINARYSEARCH}
+
+\SetKwProg{Fn}{function}{}{}
+\Fn{\FBinarySearch{$S, v, first, last$}}{
+    
+    % --- CASO BASE 1 ---
+    \textcolor{basecolor}{\If{$first > last$}{
+        \Return $0$ \tcp*{Caso Base: elemento non trovato}
+    }}
+    
+    % --- CORPO DELL'ALGORITMO ---
+    \textcolor{bodycolor}{$m \leftarrow \lfloor \frac{first + last}{2} \rfloor$\; \tcp*{Corpo: calcolo indice medio}}
+    
+    % --- CASO BASE 2 ---
+    \textcolor{basecolor}{\If{$S[m] = v$}{
+        \Return $m$ \tcp*{Caso Base: elemento trovato}
+    }}
+    
+    \Else{
+        \If{$S[m] > v$}{
+            % --- CHIAMATA RICORSIVA 1 ---
+            \textcolor{recurcolor}{\Return \FBinarySearch{$S, v, first, m - 1$} \\ \tcp*{Chiamata Ricorsiva (sinistra)}}
+        }
+        \Else{
+            % --- CHIAMATA RICORSIVA 2 ---
+            \textcolor{recurcolor}{\Return \FBinarySearch{$S, v, m + 1, last$} \\ \tcp*{Chiamata Ricorsiva (destra)}}
+        }
+    }
+}
+\end{algorithm}
+
+\vspace{0.3cm}
+
+\noindent Prendendo come esempio l'algoritmo di ricerca binaria possiamo notare
+tutti e tre i casi analizzati prima. Ma il cuore della materia è sempre quello,
+quindi anche nel caso di quelli ricorsivi ci domandiamo: 
+\textbf{quanto costa questo algoritmo?} \\
+Negli algoritmi ricorsivi il costo si calcola con la seguente 
+\textbf{relazione di ricorrenza}:
+\[ T(n) = f(n) + k \cdot T(n'_k) \]
+
+\noindent Dove $f(n)$ è il costo del \textbf{corpo}, mentre 
+$k \cdot T(n'_k)$ sono il numero di \textbf{chiamate} effettuate per 
+iterazione ($k$), moltiplicato per un $n$ di dimensione inferiore. \\
+Nel caso del \textit{binary search} il corpo ha un costo di $O(1)$, in 
+quanto ha solo una operazione di assegnazione, e il costo delle chiamate
+è invece pari a $T(n/2)$; il valore viene dalla stessa logica discussa nel 
+capitolo su questo algoritmo. \\
+
+\[ T(n) = O(1) + T(n/2) \]
+
+Notare come le chiamate ricorsive all'interno del codice sono 
+\textit{tecnicamente} due ma nella formula il coefficiente $k$ è 
+pari a $1$, questo perchè contiamo solo le chiamate ricorsive effettuate ad 
+\textit{ogni iterazione}. Poichè abbiamo un solo $if$ soltanto una 
+delle due chiamate verrà eseguita; se per esempio non avessimo avuto alcun
+$if$ allora avremmo scritto un costo tale a $2T(n/2)$.
+
+\section*{Metodi di scomposizione}
+Adesso che abbiamo la nostra relazione di ricorrenza cosa ci facciamo? \\
+La relazione così non ci dice nulla, ci serve esprimerla \textit{in funzione}
+dell'input. Ci aiuteremo quindi usando dei 
+\textbf{\textit{metodi di scomposizione}}.
+
+
+
+\end{document}
