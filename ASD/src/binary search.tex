@@ -6,30 +6,30 @@
 
 \section*{Ricerca binaria (\textit{Binary Search})}
 
-\vspace{0.3cm}
+  \vspace{0.3cm}
 
-\SetKwProg{Fn}{function}{}{}
-\SetKw{Return}{\textbf{return}}
+  \SetKwProg{Fn}{function}{}{}
+  \SetKw{Return}{\textbf{return}}
 
-\begin{algorithm}[H]
-\caption{Search the value v among the n ordered elements of S}
-\Fn{BINARYSEARCH($S$, $v$, $\mathit{first}$, $\mathit{last}$)}{
-    \If{$\mathit{first} > \mathit{last}$}{
-        \Return $0$\;
-    }
-    $m \leftarrow \lfloor \frac{\mathit{first} + \mathit{last}}{2} \rfloor$\;
-    \eIf{$S[m] = v$}{
-        \Return $m$\;
-    }{
-        \eIf{$S[m] > v$}{
-            \Return $\mathrm{binarySearch}(S, v, \mathit{first}, m - 1)$\;
-        }{
-            \Return $\mathrm{binarySearch}(S, v, m + 1, \mathit{last})$\;
-        }
-    }
-}
-\end{algorithm}
-\vspace{0.3cm}
+  \begin{algorithm}[H]
+  \caption{Search the value v among the n ordered elements of S}
+  \Fn{BINARYSEARCH($S$, $v$, $\mathit{first}$, $\mathit{last}$)}{
+      \If{$\mathit{first} > \mathit{last}$}{
+          \Return $0$\;
+      }
+      $m \leftarrow \lfloor \frac{\mathit{first} + \mathit{last}}{2} \rfloor$\;
+      \eIf{$S[m] = v$}{
+          \Return $m$\;
+      }{
+          \eIf{$S[m] > v$}{
+              \Return $\mathrm{binarySearch}(S, v, \mathit{first}, m - 1)$\;
+          }{
+              \Return $\mathrm{binarySearch}(S, v, m + 1, \mathit{last})$\;
+          }
+      }
+  }
+  \end{algorithm}
+  \vspace{0.3cm}
 
 Il cuore dell'algoritmo sta nella "divisione" dell'array, tutto in 
 maniera ricorsiva. Se seguissimo "\textit{ciclo per ciclo}" notiamo

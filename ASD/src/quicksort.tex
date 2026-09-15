@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\begin{document}
+
+\section*{\textit{Divide et impera}}
+Prima di discutere l'algoritmo ci tocca parlare della tecnica che quest'ultimo
+sfrutta: \textbf{divide et impera}.
+Caratterizzata da tre passaggi:
+\begin{itemize}
+  \item \textbf{divide}: il problema iniziale \textbf{P} di dimensione $n$ 
+  viene suddiviso in $k$ sotto-problemi di dimensione più piccola di $n$,
+  indicato come $\frac{n}{b}$.
+  \item risoluzione \textbf{ricorsiva} dei sotto problemi; se la ricorsione
+  arriva ad un caso base allora risolviamo direttamente.
+  \item \textbf{impera}: combiniamo le soluzioni di ciasciun sotto-problema
+  per ottenere la soluzione del problema originale \textbf{P}.
+\end{itemize}
+
+Il costo computazionale di un qualsiasi algoritmo \textit{divide et impera}
+prende questa forma:
+\[ T(n) = k \cdot T(\frac{n}{b}) + f(n) \]
+
+Dove $k$ è il numero di sotto-problemi generati, $\frac{n}{b}$ la loro dimensione
+e $f(n)$ il costo per dividire e combinare i problemi; questa formula prende la
+stessa struttura di quella studiata nel capitolo sugli \textit{algoritmi ricorsivi},
+poichè il \textit{divide et impera} è un applicazione diretta del paradigma di 
+ricorsione.
+
+\section*{Quicksort non in-loco}
+\vspace{0.3cm}
+
+\SetKwProg{Fn}{function}{}{}
+\SetKw{Return}{\textbf{return}}
+
+\begin{algorithm}[H]
+\renewcommand{\thealgocf}{}
+\caption{Ordina l'array}
+\Fn{QUICKSORT(array $A$)}{
+    x $\leftarrow$ elemento di $A$\;
+    \BlankLine
+    array $A_1$ $\leftarrow$ $\{ \text{elementi di A minori di } x\}$ \;
+    array $A_2$ $\leftarrow$ $\{ \text{elementi di A maggiori di } x\}$ \;
+    array $A_3$ $\leftarrow$ $\{ \text{valori di A uguali a } x\}$ \;
+    \BlankLine
+    \If{$|A_1| > 1$}{$QUICKSORT(A_1)$}
+    \If{$|A_2| > 1$}{$QUICKSORT(A_2)$}
+    \BlankLine
+    copiamo $A_1$ e $A_2$ in $A$
+}
+\end{algorithm}
+\vspace{0.3cm}
+
+L'algoritmo \textbf{\textit{QuickSort}} è un algoritmo di \textbf{ordinamento}
+che sftutta la metodologia \textit{divie et impera}:
+
+\begin{itemize}
+  \item \textbf{divide}: l'array in tanti sotto-array in base al valore del 
+  \textit{perno} (ovvero la variabile $x$)
+  \item risolve ricorsivamente $A_1$ e $A_2$ 
+  \item \textbf{impera}: concatena le due sottosequenze ordinate
+\end{itemize}
+
+Il passaggio del \textbf{divide} è più complesso di 
+quello \textbf{impera}, al contrario del \textbf{MergeSort}. \\
+L'algoritmo però non è molto efficiente per un grande proble di costo in 
+\textbf{memoria}, infatti ad ogni chiamata vengono allocati nuovi sottoarray
+$A_1, A_2$ e $A_3$. \\
+Per questo motivo è nato il \textbf{QuickSort in-loco}.
+
+\section*{Quicksort in-loco}
+
+\vspace{0.3cm}
+
+\SetKwProg{Fn}{function}{}{}
+\SetKw{Return}{\textbf{return}}
+
+\begin{algorithm}[H]
+\renewcommand{\thealgocf}{}
+\caption{Ordina l'array, versione in-loco}
+
+\Fn{QUICKSORT(array A, int i, int f)}{
+
+  \If{ $i \ge f$ } {\Return \;}
+
+  \BlankLine
+
+  m $\leftarrow$ PARTITION(A, i, f) \;
+  QUICKSORT($A$, $i$, $m - 1$) \;
+  QUICKSORT($A$, $m + 1$, $f$) \;
+
+}
+
+\BlankLine
+
+\Fn{ PARTITION(array A, int i, int f) } {
+
+  x $\leftarrow$ A[i]\;
+  inf $\leftarrow i$\;
+  sup $\leftarrow f + 1$\;
+
+  \BlankLine
+
+  %TODO%
+}
+
+\end{algorithm}
+\vspace{0.3cm}
+
+\end{document}
