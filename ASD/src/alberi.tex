@@ -12,4 +12,32 @@
 
 \section*{Introduzione}
 
+\section*{Rappresenzationi per alberi}
+
+\subsection*{Vettore posizionale}
+Questa tipologia è perfetta per gli alberi \textbf{d-ari},
+ovvero quelle strutture i cui figli di un nodo sono sempre una quantità
+$d$, eccetto per i nodi dell'ultimo livello. 
+Preso un albero $T(n, d)$ d-ario, con nodi numerati da $0$ a $n - 1$, un 
+\textbf{vettore posizionale} $P$ è un array di dimensioni $n$ dove
+l'elemento $P[v]$ conserva gli elementi del corrispondente nodo $v$. \\
+L'ordine in cui questi elementi sono conservati all'interno del vettore è 
+molto importante poichè grazie al loro ordine possiamo facilmente trovare
+qualsiasi figlio del nodo $v_i$ tramite questa formula:
+\[ P[d \cdot v + i] \]
+
+dove, ricordiamo, $d$ essere il numero dei figli di ogni nodo, $v$ il nodo 
+di cui vogliamo trovare i figli, e $i$ sarà un valore compreso tra $1$ e $d$.
+\\
+\\
+Per esempio in un albero ternario ($d = 3$) se volessi trovare i figli del 
+nodo $v = 4$ allora avrei:
+\begin{itemize}
+  \item $P[3 \cdot 4 + 1] \rightarrow P[13]$, come indice del primo figlio 
+  \item $P[3 \cdot 4 + 2] \rightarrow P[14]$, come indice del secondo figlio
+  \item $P[3 \cdot 4 + 3] \rightarrow P[15]$, come indice del terzo figlio
+\end{itemize}
+
+%TODO esempio albero%
+
 \end{document}
