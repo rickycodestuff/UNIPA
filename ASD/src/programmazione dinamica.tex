@@ -4,7 +4,23 @@
 
 \begin{document}
 
-\section*{sono ricchione}
-lol
+\section*{Introduzione}
+La \textbf{programmazione dinamica} è una tecnica basata sulle iterazioni (\textit{e non ricorsioni}).
+Similmente al \textbf{\textit{divide et impera}} anche questa tecnica lavora su dei 
+\textit{sotto-problemi}, ma la \textit{programmazione dinamica} conserva ogni soluzione di questi
+sotto-problemi all'interno di una tabella, così da non ripetersi, a differenza della tecnica gemella;
+l'uso di questa tabella evita quindi calcoli ridondanti. \\
+Tra le applicazioni più conosciute delle tecnica abbiamo: \textbf{sottovettore di somma massima},
+\textbf{\textit{edit distance}}, \textbf{\textit{Bellman-Ford}} e tanti altri.
+
+\subsection*{Edit Distance (\textit{Levenshtein distance})}
+L'algoritmo misura i \textbf{passaggi minimi} per trasformare una stringa $X$ in una stringa $Y$. \\
+Ogni carettere della prima stringa viene confrontato con un carattere della seconda, e a ogni 
+\textit{operazione} viene associato un \textbf{costo}, quest'ultimo verrà inserito nella
+posizione $[x_i, y_i]$ di una matrice ausiliaria $D$, che conterrà ogni costo di ogni operazione. \\
+La parte \textbf{iterativa} di questo algoritmo si può sintetizzare in questo modo:
+\indent All'iterazione $(i,j)$ vengono confrontati i caratteri $x_i = y_i$, se uguali il costo 
+sarà identico al passaggio precedente $D[i,j] = D[i - 1, j - 1]$, ovvero la "cella in alto a sinistra". \\
+\indent Se invece $x_i \ne y_i$ si valuta che operazione applicare: % TODO %
 
 \end{document}

@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Introduzione}
+
+Il \textbf{BucketSort} nello specifico ordina dei \textit{record}, ovvero 
+strutture contenenti più tipi di dati. La sua tecnica si basa sui così detti
+\textbf{bucket}, ovvero celle all'interno di una \textbf{struttura ausiliaria} che ci 
+aiutano a ordinare gli elementi della struttura originale.
+
+\vspace{0.3cm}
+\begin{algorithm}[H]
+\caption{\textsc{BucketSort}($A, n, k$)}
+\KwIn{Array $A$ di lunghez za $n$, numero $k$ di bucket}
+
+\tcp{Dove $n$ è la lunghezza di $A$ e $k$ è il numero di bucket}
+
+\BlankLine
+
+\tcp{Istanzio l'array ausiliario $Y$ di dimensione $k$}
+
+\For{$i = 1$ \KwTo $k$}{
+    $Y[i] \gets \text{coda vuota}$
+}
+
+\BlankLine
+
+\For{$i = 1$ \KwTo $n$}{
+    \If{$A[i].\text{chiave} \in [1 \dots k]$}{
+        $Y[A[i].\text{chiave}].\text{enqueue}(A[i])$
+    }
+}
+
+\BlankLine
+
+\tcp{Contatore di $A$}
+$j \gets 1$\;
+
+\For{$i = 1$ \KwTo $k$}{
+    \While{\textnormal{\textbf{not}} $Y[i].\text{empty}$}{
+        $A[j] \gets Y[i].\text{dequeue}()$\;
+        $j \gets j + 1$\;
+    }
+}
+\end{algorithm}
+\vspace{0.3cm}
+
+L'algoritmo quindi popolerà la \textit{struttura ausiliaria} $Y$ con elementi aventi la stessa radice 
+oer poi ricopiarli, in maniera ordinata, nella \textit{struttura originale}.
+Inoltre è una tecnica \textbf{stabile} poichè se due elementi con la stessa chiave finiscono
+nello stesso bucket "usciranno" nello stesso ordine in cui sono entrati.
+
+\section*{Costic computazionali}
+L'algoritmo dipende soltanto da due variabili, $n$ e $k$, quindi il suo costo è semplicemente 
+$O(n + k)$, ma se $k$ è direttamente proporzionale a $n$ allora i costo diventerà \textbf{lineare}:
+$O(n)$, \\
+Allo stesso modo però se ci ritroviamo con un $k = n^2$ il costo si alzerà ancora di più. 
+
+
+\end{document}

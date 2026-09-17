@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Introduzione}
+Per risolvere alcuni problemi di \textbf{ottimizzazione} usiamo le \textbf{metodologie greedy},
+delle tecniche risolutive dove ad ogni passaggio scegliamo la soluzione che, al momento, è la 
+più promettente. Viene usata nei problemi dove abbiamo un numero $C$ di oggetti e dei vincoli che
+devono essere soddisfatti. \\
+La soluzione $S$ che vogliamo trovare è infatti un sottoinsieme degli oggetti di $C$, ma accetteremo
+$S$ solo se rispetta i vincoli posti dal problema. 
+
+\vspace{0.3cm}
+% Personalizzazioni per riprodurre lo stile esatto dell'immagine
+\SetKwProg{Fn}{algoritmo}{}{}%
+\SetKwFunction{ParadigmaGreedy}{paradigmaGreedy}%
+\SetKwFunction{Seleziona}{seleziona}%
+\SetKwFunction{Ottimo}{ottimo}%
+\SetKwFunction{Ammissibile}{ammissibile}%
+
+\begin{algorithm}[H]
+\Fn{\ParadigmaGreedy{\textnormal{\textit{insieme di candidati C}}} $\to$ \textnormal{\textit{soluzione}}}{
+
+    \BlankLine
+
+    \tcp{Variabile dove conserveremo la nostra soluzione}
+    $Soluzione \gets \emptyset$\;
+
+    \BlankLine
+
+    \tcp{Continua finchè non troviamo la soluzione ottimale o finchè non ci sono più candidati}
+    \While{$((\textbf{not } \Ottimo(Soluzione)) \textbf{ and } (C \neq \emptyset))$}{
+
+        \BlankLine
+
+        \tcp{Estraiamo un candidato}
+        $x \gets \Seleziona(C)$\;
+        $C \gets C - \{x\}$\;
+        
+
+        \BlankLine
+
+        \tcp{Controlliamo se il canditato è una possibile soluzione ottimale}
+        \If{$(\textbf{ammissibile}(S \cup \{x\}))$}{$S \gets S \cup \{x\}$\;}
+    }
+
+    \BlankLine
+
+    \tcp{Usciti dal ciclo vuol dire che abbiamo trovato la nostra soluzione}
+    \eIf{$(\textbf{ottimo}(S))$}{
+        \textbf{return} $S$\;
+    }{
+      \tcp{Oppure abbiamo esaurito i candidati}
+        \textbf{errore} non ho trovato soluzioni\;
+    }
+}
+\end{algorithm}
+\vspace{0.3cm}
+
+Tra le tecniche greedy più famose troviamo: \textbf{bruteforce} e \textbf{problema dello zaino}
+
+\end{document}
