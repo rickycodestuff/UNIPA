@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\begin{document}
+
+\section*{La logica dietro la struttura heap}
+L'algoritmo usa la struttura dati \textbf{\textit{heap}} per poter estrarre rapidamente
+il valore massimo ($\Theta(\log n)$) sfruttando la logica del \textit{max heap},
+ovvero la \textit{chiave} di un qualsiasi nodo $v$ sarà sempre maggiore della chiave dei suoi figli. \\
+Un heap è un \textbf{albero binario} completo, quindi ogni nodo avrà due figli, fino al 
+penultimo livello, ed è una struttura dati rappresentata tramite \textbf{vettore di posizione},
+quindi preso un qualsiasi nodo $v$ per trovare i suoi figli seguiremo la solita formula 
+$P[d \cdot v + i]$, che possiamo specificare come $P[2 \cdot v]$ per il figlio destro e 
+$P[2 \cdot v + 1]$ per il sinistro. 
+
+\section*{L'algoritmo}
+
+% HEAPSORT %
+\vspace{0.3cm}
+\begin{algorithm}[H]
+\SetKwFunction{FBuildMaxHeap}{buildMaxHeap}
+\SetKwFunction{FHeapify}{heapify}
+\SetKwProg{Fn}{heapsort}{}{}%
+
+\Fn{$(array\ A)$}{
+    \FBuildMaxHeap{$A$}\;
+
+    \BlankLine
+
+    \tcp{estrazione dei valori dall'heap}
+    \For{$i = n$ \KwTo $1$}{
+        \textbf{swap} $A[i], A[1]$\;
+        $n \gets n - 1$\;
+        \FHeapify{$A, 1$}\;
+    }
+}
+\caption{heapsort}
+\end{algorithm}
+\vspace{0.3cm}
+
+L'algoritmo presenta due funzioni ausiliarie importantissime che andremo ad analizzare 
+nel dettaglio
+
+% BUILD MAX HEAP %
+\vspace{0.3cm}
+\begin{algorithm}[H]
+\SetKwFunction{FHeapify}{heapify}
+\SetKwProg{Fn}{buildMaxHeap}{}{}%
+
+\Fn{$(array\ A)$}{
+    $n \gets A.len()$\;
+
+    \BlankLine
+
+    \tcp{costruzione dell'heap solo sui nodi padri per}
+    \tcp{salvarci del tempo}
+    \For{$i = \lfloor n/2 \rfloor$ \KwTo $1$}{
+        \FHeapify{$A, i$}\;
+    }
+}
+\caption{buildMaxHeap}
+\end{algorithm}
+\vspace{0.3cm}
+
+$buildMaxHeap$ si occupa della costruzione della struttura dati dal semplice array iniziale. 
+Notare come non siamo iterando su ogni nodo ma soltanto sulla prima metà perchè la funzione succesiva,
+$heapify$, considera ogni figlio succesivo.
+
+% HEAPIFY % 
+\vspace{0.3cm}
+\begin{algorithm}[H]
+\SetKwFunction{FHeapify}{heapify}
+\SetKwProg{Fn}{heapify}{}{}%
+
+\Fn{$(array\ A, int\ father)$}{
+    $newFather \gets father$\;
+    $left \gets father \times 2$\;
+    $right \gets father \times 2 + 1$\;
+
+    \BlankLine
+    \BlankLine
+
+    \tcp{se l'indice left ha "sforato" la lunghezza dell'array}
+    \tcp{e se è maggiore del padre}
+    \If{$left \le A.len() \textbf{ and } A[left] > A[father]$}{
+        $newFather \gets left$\;
+    }
+
+    \BlankLine
+
+    \tcp{se l'indice right ha "sforato" la lunghezza dell'array}
+    \tcp{e se è maggiore del padre}
+    \If{$right \le A.len() \textbf{ and } A[right] > A[father]$}{
+        $newFather \gets right$\;
+    }
+
+    \BlankLine
+
+    \tcp{se il padre non è cambiato}
+    \If{$newFather \neq father$}{
+        \textbf{swap} $A[fater], A[newFather]$\;
+        \FHeapify{$A, newFather$}\;
+    }
+}
+\caption{heapify}
+\end{algorithm}
+\vspace{0.3cm}
+
+Come già detto prima l'algoritmo sfrutta la formula $P[2 \cdot v]$ e $P[2 \cdot v + 1]$ per trovare
+subito i figli del padre su cui stiamo attualmente lavorando. L'array su cui stiamo lavorando
+non è ovviamente ordinato quindi i due $if$ servono proprio per gestire l'ordine tra i padri ed 
+i figli.
+
+\section*{Costo computazionale}
+Il costo verrà ovviamente dettato dalla somma delle due funzioni, quindi:
+
+\[ T(n) = \text{BuildMaxHeap} + \text{Heapify in Heapsort} \]
+
+Come detto prima $buildMaxHeap$ itera usando un for a "metà", ma nel caso pegiore quell'altra
+metà sarà analizzata da Heapify, portando il costo a $O(n)$. Infine notiamo come la funzione 
+originale $heapsort$ itera usando un for da $n$ a $1$, ma non esegue esattamente $n$ cicli poichè
+ad ogni iterazione viene si decrementato $i = i - 1$, ma succede lo stesso con $n = n - 1$, portando
+quindi ad avere $\log n$ cicli, in cui al suo interno avremo un $heapify$ con costo $O(n)$.
+
+\[ T(n) = \text{BuildMaxHeap} + \text{Heapify in Heapsort} \]
+\[ \downarrow \]
+\[ T(n) = O(n) + O(n \cdot \log n) = O(n \cdot \log n)\]
+
+\end{document}

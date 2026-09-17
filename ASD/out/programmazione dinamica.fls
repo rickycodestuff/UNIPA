@@ -1,0 +1,41 @@
+PWD d:\UNIPA\LaTeX\ASD\src
+INPUT C:\Users\ricca\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT d:\UNIPA\LaTeX\ASD\src\programmazione dinamica.tex
+OUTPUT d:\UNIPA\LaTeX\ASD\out\programmazione dinamica.log
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\babel\txtbabel.def
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\it\babel-italian.tex
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\it\babel-italian.tex
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\it\babel-italian.tex
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\it\babel-it.ini
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\babel-italian\italian.ldf
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\babel-italian\italian.ldf
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\babel-italian\italian.ldf
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT d:\UNIPA\LaTeX\ASD\out\programmazione dinamica.aux
+INPUT d:\UNIPA\LaTeX\ASD\out\programmazione dinamica.aux
+INPUT d:\UNIPA\LaTeX\ASD\out\programmazione dinamica.aux
+OUTPUT d:\UNIPA\LaTeX\ASD\out\programmazione dinamica.aux
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+OUTPUT d:\UNIPA\LaTeX\ASD\out\programmazione dinamica.pdf
+INPUT C:\Users\ricca\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT d:\UNIPA\LaTeX\ASD\out\programmazione dinamica.aux
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\ricca\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb

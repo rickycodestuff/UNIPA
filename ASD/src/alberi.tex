@@ -3,6 +3,10 @@
 \usepackage[italian]{babel}
 \usepackage{xcolor}
 \usepackage[ruled,lined,linesnumbered]{algorithm2e}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
 
 \title{Alberi}
 \author{Riccardo Di Michele}
@@ -12,7 +16,54 @@
 
 \section*{Introduzione}
 
-\section*{Rappresenzationi per alberi}
+\section*{Rappresenzationi indicizzate per alberi}
+Tutte le seguenti rappresenzationi hanno un \textbf{costo di spazio} pari a $O(n)$, dove $n$ è ovviamente
+la grandezza dell'array usato. Sono strutture indicate per alberi statici poichè l'\textbf{inserimento} e 
+\textbf{cancellazione} dei nodi (tranne rari casi) può raggiungere costi elavati. \\
+Un loro grande vantaggio è però l'acceso alle info
+
+\subsection*{Vettore dei padri}
+Questa rappresenzatione è molto generica e usata principalmente in alberi statici, la cui forma 
+non cambia. Si basa sul conservare l'indice relativo al padre
+di ogni nodo all'interno del \textbf{nodo stesso}.
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{c c c}
+    \toprule
+    \textbf{Indice} & \textbf{Info} & \textbf{Parent} \\
+    \midrule
+    0  & A & null \\
+    1  & B & 0    \\
+    2  & C & 0    \\
+    3  & D & 0    \\
+    4  & E & 1    \\
+    5  & F & 1    \\
+    6  & G & 1    \\
+    7  & H & 2    \\
+    8  & I & 2    \\
+    9  & L & 2    \\
+    10 & M & 3    \\
+    11 & N & 3    \\
+    12 & O & 3    \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:albero-vettore}
+\end{table}
+
+Ogni elemento del \textbf{vettore padri} sarà quindi un nodo contente la coppia 
+\textit{info-parent}. Questo approccio porta ovviamente un'ipotetica funzione $trovaPadre(v)$
+ad avere un costo computazionale pari a $O(1)$, ma ad avere invece, una funzione $trovaFiglio(v)$
+con costo $O(n)$, nel caso il figlio fosse alla "fine" della struttura.
+\\
+\\
+Altre operazioni potrebbero però risultare complesse, come l'\textbf{inserimento di un nodo}: 
+possiamo facilmente \textit{appendere} il nuovo nodo all'array (\textit{o in caso riallocare spazio})
+ma dobbiamo comunque rispettare la struttura dell'\textit{array padri} cercando il padre del nuovo 
+nodo inserito, portando quindi l'operazione ad un costo nel caso peggiore di $O(n)$. \\
+Nel caso della \textbf{eliminazione di un nodo} le cose si complicano. Avremo sempre un costo $O(n)$,
+poichè dobbiamo potenzialmente scorrere tutto l'array per trovare il nodo da cancellare, ma non solo
+una volta cancellato, in base alla strategia scelta, avremo costi in più. 
 
 \subsection*{Vettore posizionale}
 Questa tipologia è perfetta per gli alberi \textbf{d-ari},
@@ -37,7 +88,74 @@ nodo $v = 4$ allora avrei:
   \item $P[3 \cdot 4 + 2] \rightarrow P[14]$, come indice del secondo figlio
   \item $P[3 \cdot 4 + 3] \rightarrow P[15]$, come indice del terzo figlio
 \end{itemize}
+Come nel caso del \textit{vettore padri} anche qui l'\textbf{inserimento di un nuovo nodo}
+è un caso complicato.  \\
+Se dovessimo inserire l'ultimo nodo allora possiamo tranquillamente 
+\textit{appendere} il nodo alla fine dell'array, andando a rispettare la stuttura posizionale,
+ma nel caso di un inserimento aribitrario - per esempio "in mezzo" all'array - le cose si fanno
+molte complicate, portando per esempio a \textit{shiftare} tutti gli altri nodi e, possibilmente,
+ad avere un costo di $O(1)$. \\
+Lo stesso discorso possiamo farlo con l'istruzione $delete(v)$: $O(1)$ se consideriamo 
+l'ultimo nodo o ancora più costoso in base alle strategie usate.
 
-%TODO esempio albero%
+\section*{Rappresenzationi collegate per alberi}
+Questa tipologia si basa invece sull'idea di conservare i nodi come \textbf{record}, ovvero
+una struttura capace di contenere \textit{dati eterogenei}. Il nodo infatti conterrà in primis
+l'informazione conservata e dei \textbf{puntatori} ad altri nodi in base alla tipologia
+di rappresenzatione scelta. \\
+Danno una maggiore libertà rispetto a quelli \textit{indicizzati} ma presentano delle difficoltà
+quando dobbiamo \textbf{accedere} ai nodi; in questa tipologia caso lo spazio occupato 
+dipende dal tipo di rappresenzatione scelto.
+
+\subsection*{Puntatori ai figli}
+Qui ogni \textit{record} presenta un puntatore per ciascuno dei suoi $d$-figli, nel caso non avesse
+un figlio il campo sarà $null$. \\
+Il suo spazio sarà quindi di $O(n \cdot d)$, dove $n$ sono i nodi dell'albero e $d$ i figli di ciascun
+nodo, che, se costanti, possono semplificare il costo in $O(n)$.
+
+% todo foto dell'albero %
+
+\subsection*{Liste di puntatori ai figli}
+Ogni nodo questa volta conserva un puntatore ad una \textbf{lista} contenente puntatori ai suoi figli.
+Questa lista è spesso implementata tramite una \textbf{struttura collegata}, o, se è noto 
+il \textit{massimo numero di figli}, può essere facilmente implementata tramite un \textit{array}. \\
+Lo spazio occupato è invece pari a $O(1)$: ogni nodo ha una lista che copre una parte (o nessuna) 
+degli $n$ nodi totali, messe insieme però le liste coprano tutti gli $n$ nodi.
+
+\subsection*{Primo figlio-fratello successivo}
+Infine in questo tipo di rappresenzatione ogni nodo conserva un puntatore al suo primo \textbf{figlio}, 
+se presente, ed uno al suo prossimo \textbf{fratello}, se presente. \\
+Anche qui lo spazio è di $O(n)$.
+
+\begin{table}[htbp]
+\centering
+\Large \textbf{Rappresentazioni di alberi ($d$ figli, $n$ nodi)} \\[1.2em]
+\normalsize
+\renewcommand{\arraystretch}{1.5}
+
+\begin{tabular}{|
+  >{\centering\arraybackslash}m{2.3cm}|
+  >{\centering\arraybackslash}m{2.5cm}|
+  >{\centering\arraybackslash}m{1.5cm}|
+  >{\centering\arraybackslash}m{1.5cm}|
+  >{\centering\arraybackslash}m{1.5cm}|
+  >{\centering\arraybackslash}m{3.0cm}|
+  >{\centering\arraybackslash}m{3.2cm}|
+}
+\hline
+\textbf{Nome} & \textbf{Tipo / Uso preferito} & \textbf{Memoria} & \textbf{Accesso Padre} & \textbf{Accesso ai Figli} & \textbf{\texttt{Insert()}} & \textbf{\texttt{Delete()}} \\ \hline
+
+Vettore dei padri & Indicizzata / Alberi statici & $O(n)$ & $O(1)$ & $O(n)$ & $O(n)$ se devo trovare indice del padre & $O(n)$ + strategia figli? \\ \hline
+
+Vettore Posizionale & Indicizzata / Alberi statici & $O(n)$ & $O(1)$ & $O(1)$ & $O(1)$ se vincolo su ultimo nodo & $O(1)$ se vincolo ultimo nodo \\ \hline
+
+Puntatori ai Figli & Collegata / Alberi dinamici & $O(n)$ & $O(n)$ & $O(1)$ & $O(n)$ se devo trovare padre & $O(n)$ se devo trovare nodo + strategia figli? \\ \hline
+
+Liste di Puntatori ai figli & Collegata / Alberi dinamici & $O(n)$ & $O(n)$ & $O(d)$ & $O(n)$ se devo trovare padre & $O(n)$ se devo trovare nodo + strategia figli? \\ \hline
+
+Primo figlio-fratello successivo & Collegata / Alberi dinamici & $O(n)$ & $O(n)$ & $O(d)$ & $O(n)$ se devo trovare padre & $O(n)$ se devo trovare padre + strategia figli? \\ \hline
+
+\end{tabular}
+\end{table}
 
 \end{document}
