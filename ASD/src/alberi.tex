@@ -15,6 +15,24 @@
 \maketitle
 
 \section*{Introduzione}
+Usiamo questa \textit{struttura dati} per conservare i nostri dati in maniera \textbf{gerarchica},
+seguendo un certo ordine. Un \textbf{albero} è composto da \textbf{nodi}, ciò che contiene i nostri dati
+e da \textbf{archi}, ciò che collega i nostri \textit{nodi}. \\
+I nodi possono essere chiamati:
+\begin{itemize}
+  \item \textbf{padre}: quando da quel nodo \textit{parte} un arco verso un'altro, o altri nodi
+  \item \textbf{figlio}: quando in quel nodo \textit{entra \textbf{un solo}} arco
+  \item \textbf{radice}: ovvero l'unico nodo dell'albero \textbf{senza un padre}
+  \item \textbf{fratelli}: nodi figlio che condividono lo stesso padre
+  \item \textbf{foglie}: nodi posti alla "fine" della struttura che non presentano figli
+\end{itemize}
+
+Infine useremo il termine \textbf{altezza} dell'albero per intendere la distanza massima tra la 
+\textit{radice} e la \textit{foglia} più profonda, e il termine \textbf{profondità} per intendere 
+il numero di archi (o \textit{passaggi}) da attraversare per arrivare dalla radice a un determinato
+nodo $v$.
+
+\section*{Tipologie di alberi}
 
 \section*{Rappresenzationi indicizzate per alberi}
 Tutte le seguenti rappresenzationi hanno un \textbf{costo di spazio} pari a $O(n)$, dove $n$ è ovviamente
@@ -127,9 +145,10 @@ Infine in questo tipo di rappresenzatione ogni nodo conserva un puntatore al suo
 se presente, ed uno al suo prossimo \textbf{fratello}, se presente. \\
 Anche qui lo spazio è di $O(n)$.
 
+\vspace{0.3cm}
 \begin{table}[htbp]
 \centering
-\Large \textbf{Rappresentazioni di alberi ($d$ figli, $n$ nodi)} \\[1.2em]
+\Large \textbf{Considerazioni sui costi computazionali} \\[1.2em]
 \normalsize
 \renewcommand{\arraystretch}{1.5}
 
@@ -157,5 +176,33 @@ Primo figlio-fratello successivo & Collegata / Alberi dinamici & $O(n)$ & $O(n)$
 
 \end{tabular}
 \end{table}
+
+\section*{Tipologie di albero}
+
+\subsection*{Albero di ricerca binario e AVL}
+Un albero binario (ogni padre ha al massimo due figli), viene considerato \textbf{di ricerca} se
+preso un qualsiasi nodo $v$:
+ogni chiave del suo \textbf{sotto-albero sinistro} è minore della chiave di $v$ e se la stessa 
+condizione si applica, al contrario, al \textbf{sotto-albero destro}. \\
+Poichè i nodi sono disposti in questo ordine le operazioni come $search()$ diventano più semplici
+avendo un costo nel caso peggiore pari all'altezza dell'albero, ma questo non vuol dire che il costo
+sia semplice. \\
+Questa tipologia infatti non introduce nessun \textit{bilanciamento}, quindi potremmo avere un caso
+in cui tutti i nodi dell'albero siano a catena nel sotto-albero sinistro, portando così ad avere
+un $search$ con costo pari a $O(h) = O(n)$.
+\\
+\\
+Proprio per evitare che l'altezza degeneri i nostri costi è stato introdotto l'albero \textbf{AVL} 
+(\textbf{A}delson-\textbf{V}elsky and \textbf{L}andis). Questa nuova tipologia introduce un 
+\textbf{fattore di bilanciamento}, per ogni nodo infatti viene calcolata la 
+\textbf{differenza} tra il suo sotto-albero sinistro e quello destro. 
+
+\[ \beta = H_L - H_R\]
+
+Per considerarsi \textit{bilanciato} ogni nodo $v$ dovrà avere un fattore di bilanciamento 
+compreso tra $0$ e $|1|$.
+
+\subsection*{Heap}
+
 
 \end{document}
